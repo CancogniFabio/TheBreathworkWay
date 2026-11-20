@@ -28,14 +28,14 @@
       if (r.type === 1) { if (ok(r.selectorText)) { out += r.cssText + '\n'; (r.style.animationName || r.style.animation || '').split(/[\s,]+/).forEach(x => kfUsed.add(x)) } }
       else if (r.type === 4 || r.type === 12) { const inner = walk(r.cssRules); if (inner) out += (r.type === 4 ? '@media ' : '@supports ') + r.conditionText + '{' + inner + '}\n' }
       else if (r.type === 5) { const f = r.style.getPropertyValue('font-family').replace(/["']/g, '').toLowerCase().trim(); if (fams.has(f)) out += r.cssText + '\n' }
-      else if (r.type === 7) { out += '@@KF@@' + r.name + '@@' + r.cssText + '\n' }
+      else if (r.type === 7) { out += '@@KF@@' + r.name + '@@' + r.cssText.replace(/\n/g, ' ') + '\n' }
       else if (r.type !== 3) { out += r.cssText + '\n' }
     }
     return out;
   }
   let css = '';
   for (const s of document.styleSheets) { try { css += walk(s.cssRules) } catch (e) { } }
-  css = css.split('\n').map(l => { const m = l.match(/^@@KF@@([^@]+)@@(.*)$/); return m ? (kfUsed.has(m[1]) ? m[2] : '') : l }).join('\n');
+  css = css.split('\n').map(l => { return l.replace(/@@KF@@([^@]+)@@(.*)$/, (x, n, k) => kfUsed.has(n) ? k : '') }).join('\n');
   css = css.replace(/url\((['"]?)([^'")]+)\1\)/g, (m, q, u) => u.startsWith('data:') ? m : 'url("' + abs(u) + '")');
   css += '\n.elementor-invisible{visibility:visible!important}\n';
 

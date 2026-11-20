@@ -18,13 +18,24 @@ dest = os.path.join(ROOT, 'index.html') if slug == 'home' else os.path.join(ROOT
 os.makedirs(os.path.dirname(dest), exist_ok=True)
 open(dest, 'w', encoding='utf-8').write(s)
 
+
+def fix_css(t):
+    # ripara i resti delle @keyframes non usate (blocchi orfani che rompono il CSS successivo)
+    if 'id="tbw-used-css">' not in t:
+        return t
+    a = t.index('id="tbw-used-css">') + 18
+    b = t.index('</style>', a)
+    css = re.sub(r'@@KF@@[^@]+@@', '', t[a:b])
+    css = re.sub(r'\n\n(?:[ \t]+[^\n]*\{[^\n]*\}[ \t]*\n)+\}', '\n', css)
+    return t[:a] + css + t[b:]
+
 # pagine già copiate = cartelle con index.html
 copied = [d for d in os.listdir(ROOT) if os.path.isfile(os.path.join(ROOT, d, 'index.html'))]
 pages = [os.path.join(ROOT, 'index.html')] + [os.path.join(ROOT, d, 'index.html') for d in copied]
 for p in pages:
     depth = 0 if os.path.dirname(p) == ROOT else 1
     up = '../' * depth
-    t = open(p, encoding='utf-8').read()
+    t = fix_css(open(p, encoding='utf-8').read())
     t = t.replace('href="./"', 'href="%s"' % (up or './'))
     t = t.replace('href="%s"' % LIVE, 'href="%s"' % (up or './'))
     if depth:
