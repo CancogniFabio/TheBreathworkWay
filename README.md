@@ -19,6 +19,10 @@ Copia 1:1 di thebreathworkway.com, ricostruita una pagina al giorno. Anteprima c
 Vedi GO-LIVE.md (cosa è pronto e cosa resta). `python3 tools/golive.py` crea dist/ per GreenGeeks.
 Pagine rinominate nella copia: /privacy-policy/ (era /cookie-policy-copy/), /cookies-policy/ (era /contact-copy/), /terms-conditions/ (era /terms-conditions-2/), /behind-the-guilt-of-slowing-down/ (era guild). finalize.py le gestisce da sé.
 
+## Qualità e coerenza (dopo la copia)
+Pipeline di finalize.py: seo.py (titoli, H1, font, CSS di qualità) -> footer.py (footer unico della Home) -> fixes.py (correzioni testi inglesi, tools/fixes/text-en.json) -> i18n.py (pagine /it/).
+Ritocchi di stile in tools/quality.css (header e menu mobile, margini su tablet e telefono, Contatti, newsletter).
+
 ## Italiano
 Pagine italiane in /it/ generate da tools/i18n.py (traduzioni in tools/i18n/it.json, chiave = testo inglese). finalize.py le rigenera da solo: se una pagina inglese cambia, i testi nuovi restano in inglese finché non si aggiungono a it.json (lo script li elenca).
 

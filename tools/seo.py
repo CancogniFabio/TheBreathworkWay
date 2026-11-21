@@ -135,6 +135,9 @@ def fix_fonts(slug, t):
 
 def fix_css(slug, t):
     t = re.sub(r'<style id="tbw-seo-css">.*?</style>', '', t, flags=re.S)
+    t = re.sub(r'<style id="tbw-quality">.*?</style>', '', t, flags=re.S)
+    q = open(os.path.join(ROOT, 'tools', 'quality.css'), encoding='utf-8').read()
+    t = t.replace('</head>', '<style id="tbw-quality">%s</style></head>' % q, 1)
     f = os.path.join(ROOT, 'tools', 'seo-css.json')
     css = json.load(open(f)).get(slug, '') if os.path.exists(f) else ''
     if css:

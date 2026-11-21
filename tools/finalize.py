@@ -66,6 +66,10 @@ print('ok', dest, 'pagine copiate:', ['home'] + sorted(copied))
 # sistemazioni SEO (titoli, H1/H2, canonical) senza cambiare l'aspetto
 import subprocess
 subprocess.run([sys.executable, os.path.join(ROOT, 'tools', 'seo.py')], check=True)
+# footer unico (quello della Home)
+subprocess.run([sys.executable, os.path.join(ROOT, 'tools', 'footer.py')], check=True)
+# correzioni dei testi inglesi
+subprocess.run([sys.executable, os.path.join(ROOT, 'tools', 'fixes.py')], check=True)
 # versione italiana (/it/) e pulsante EN/IT
 subprocess.run([sys.executable, os.path.join(ROOT, 'tools', 'i18n.py'), 'extract'], check=True)
 subprocess.run([sys.executable, os.path.join(ROOT, 'tools', 'i18n.py'), 'build'], check=True)
