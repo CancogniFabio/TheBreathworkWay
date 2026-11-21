@@ -36,6 +36,9 @@ for p in pages:
     depth = 0 if os.path.dirname(p) == ROOT else 1
     up = '../' * depth
     t = fix_css(open(p, encoding='utf-8').read())
+    # sul live lo script di Elementor aggiunge e-lazyloaded quando la sezione entra nello schermo;
+    # senza script le immagini di sfondo restano nascoste (su telefono il testo bianco finisce su fondo chiaro)
+    t = re.sub(r'class="([^"]*\be-parent\b)(?![^"]*e-lazyloaded)([^"]*)"', r'class="\1\2 e-lazyloaded"', t)
     t = t.replace('href="./"', 'href="%s"' % (up or './'))
     t = t.replace('href="%s"' % LIVE, 'href="%s"' % (up or './'))
     if depth:
