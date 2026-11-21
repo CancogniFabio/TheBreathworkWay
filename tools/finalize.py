@@ -39,7 +39,7 @@ def fix_css(t):
     return t[:a] + css + t[b:]
 
 # pagine già copiate = cartelle con index.html
-copied = [d for d in os.listdir(ROOT) if os.path.isfile(os.path.join(ROOT, d, 'index.html'))]
+copied = [d for d in os.listdir(ROOT) if os.path.isfile(os.path.join(ROOT, d, 'index.html')) and d not in ('it', 'dist')]
 pages = [os.path.join(ROOT, 'index.html')] + [os.path.join(ROOT, d, 'index.html') for d in copied]
 for p in pages:
     depth = 0 if os.path.dirname(p) == ROOT else 1
@@ -66,3 +66,6 @@ print('ok', dest, 'pagine copiate:', ['home'] + sorted(copied))
 # sistemazioni SEO (titoli, H1/H2, canonical) senza cambiare l'aspetto
 import subprocess
 subprocess.run([sys.executable, os.path.join(ROOT, 'tools', 'seo.py')], check=True)
+# versione italiana (/it/) e pulsante EN/IT
+subprocess.run([sys.executable, os.path.join(ROOT, 'tools', 'i18n.py'), 'extract'], check=True)
+subprocess.run([sys.executable, os.path.join(ROOT, 'tools', 'i18n.py'), 'build'], check=True)

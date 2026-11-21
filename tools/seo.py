@@ -55,7 +55,7 @@ def pages():
     yield 'home', os.path.join(ROOT, 'index.html')
     for d in sorted(os.listdir(ROOT)):
         f = os.path.join(ROOT, d, 'index.html')
-        if os.path.isfile(f) and d not in ('assets', 'tools'):
+        if os.path.isfile(f) and d not in ('assets', 'tools', 'it', 'dist'):
             yield d, f
 
 
@@ -107,6 +107,32 @@ def fix_headings(slug, t):
     return t
 
 
+# solo Antonio e Archivo: gli altri font (vecchi stili WordPress) diventano Archivo
+OLD_FONTS = r"Cormorant Garamond|Cormorant|Assistant|Inter|Lato|Lora|Montserrat|Open Sans|Roboto"
+TEXT_FONTS = re.compile(r"^\s*[\"']?(Antonio|Archivo|%s)[\"']?\s*$" % OLD_FONTS, re.I)
+FONT_FACES = """@font-face{font-family:Antonio;font-style:normal;font-display:swap;font-weight:100 700;src:url("{up}assets/fonts/antonio-latin-wght-normal.woff2") format("woff2");unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+@font-face{font-family:Antonio;font-style:normal;font-display:swap;font-weight:100 700;src:url("{up}assets/fonts/antonio-latin-ext-wght-normal.woff2") format("woff2");unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF}
+@font-face{font-family:Archivo;font-style:normal;font-display:swap;font-weight:100 900;src:url("{up}assets/fonts/archivo-latin-wght-normal.woff2") format("woff2");unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+@font-face{font-family:Archivo;font-style:normal;font-display:swap;font-weight:100 900;src:url("{up}assets/fonts/archivo-latin-ext-wght-normal.woff2") format("woff2");unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF}
+@font-face{font-family:Archivo;font-style:italic;font-display:swap;font-weight:100 900;src:url("{up}assets/fonts/archivo-latin-wght-italic.woff2") format("woff2");unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+@font-face{font-family:Archivo;font-style:italic;font-display:swap;font-weight:100 900;src:url("{up}assets/fonts/archivo-latin-ext-wght-italic.woff2") format("woff2");unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF}
+"""
+
+
+def fix_fonts(slug, t):
+    up = '' if slug == 'home' else '../'
+    def face(m):
+        fam = re.search(r'font-family:\s*([^;]+);', m.group(0))
+        return '' if fam and TEXT_FONTS.match(fam.group(1)) else m.group(0)
+    t = re.sub(r'@font-face\s*\{[^}]*\}\n?', face, t)
+    def decl(m):
+        return re.sub(r'(?<![\w-])(%s)(?![\w-])' % OLD_FONTS, 'Archivo', m.group(0), flags=re.I)
+    t = re.sub(r'font-family\s*:(?:[^;}"<]|"[^"]*"|&quot;)*', decl, t)
+    t = re.sub(r'<style id="tbw-fonts">.*?</style>', '', t, flags=re.S)
+    t = t.replace('<style id="tbw-used-css">', '<style id="tbw-fonts">%s</style><style id="tbw-used-css">' % FONT_FACES.replace('{up}', up), 1)
+    return t
+
+
 def fix_css(slug, t):
     t = re.sub(r'<style id="tbw-seo-css">.*?</style>', '', t, flags=re.S)
     f = os.path.join(ROOT, 'tools', 'seo-css.json')
@@ -120,6 +146,7 @@ for slug, f in pages():
     t = open(f, encoding='utf-8').read()
     t = fix_head(slug, t)
     t = fix_headings(slug, t)
+    t = fix_fonts(slug, t)
     t = fix_css(slug, t)
     open(f, 'w', encoding='utf-8').write(t)
 print('seo ok')

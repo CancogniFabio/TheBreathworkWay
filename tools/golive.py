@@ -14,8 +14,8 @@ NOT_IN_SITEMAP = {'registration-form-bw-ceremony'}
 
 shutil.rmtree(DIST, ignore_errors=True)
 os.makedirs(DIST)
-slugs = sorted(d for d in os.listdir(ROOT) if os.path.isfile(os.path.join(ROOT, d, 'index.html')) and d not in ('dist',))
-for f in ['index.html', '404.html'] + [s + '/index.html' for s in slugs]:
+slugs = sorted(d for d in os.listdir(ROOT) if os.path.isfile(os.path.join(ROOT, d, 'index.html')) and d not in ('dist', 'it'))
+for f in ['index.html', '404.html'] + [s + '/index.html' for s in slugs] + ['it/index.html'] + ['it/' + s + '/index.html' for s in slugs]:
     t = open(os.path.join(ROOT, f), encoding='utf-8').read()
     t = t.replace('<meta name="robots" content="noindex, nofollow">', '', 1) if f != '404.html' else t
     os.makedirs(os.path.dirname(os.path.join(DIST, f)) or DIST, exist_ok=True)
@@ -26,6 +26,7 @@ for f in ('robots.txt', '.htaccess'):
     shutil.copy(os.path.join(ROOT, 'golive', f), os.path.join(DIST, f))
 today = datetime.date.today().isoformat()
 urls = [LIVE] + [LIVE + s + '/' for s in slugs if s not in NOT_IN_SITEMAP and s != 'assets']
+urls += [u.replace(LIVE, LIVE + 'it/', 1) for u in urls]
 xml = '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
 xml += ''.join('  <url><loc>%s</loc><lastmod>%s</lastmod></url>\n' % (u, today) for u in urls) + '</urlset>\n'
 open(os.path.join(DIST, 'sitemap.xml'), 'w').write(xml)

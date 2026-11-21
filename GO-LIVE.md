@@ -14,8 +14,12 @@ Aggiornato il 21 nov 2026.
 - [x] `golive/robots.txt` definitivo e sitemap.xml generata
 - [x] `python3 tools/golive.py` crea `dist/`, la cartella da caricare in public_html (senza noindex)
 
+- [x] Solo due font, Antonio e Archivo, ospitati nel repo (assets/fonts, 6 file, 192 KB). Lora, Cormorant, Assistant, Inter e gli altri vecchi stili ora usano Archivo
+- [x] Versione italiana completa in /it/ con pulsante EN/IT nel menu (desktop e mobile), hreflang e sitemap con le due lingue
+- [x] Menu mobile funzionante (senza gli script di WordPress non si apriva)
+
 ## Da fare (Claude, quando il computer di Fabio è acceso)
-- [ ] Copiare nel repo immagini, video e font ancora sul vecchio WordPress (circa 200 file, 917 riferimenti)
+- [ ] Copiare nel repo solo le immagini e i video usati davvero nelle pagine (niente libreria media intera)
 - [ ] Rimettere i dati strutturati (JSON-LD di Rank Math) presi dal live
 - [ ] Testo alternativo per le 13 immagini senza alt
 - [ ] Scaricare la sitemap del live per trovare eventuali pagine o articoli non copiati e aggiungere i redirect
@@ -30,6 +34,7 @@ Obiettivo: modulo normale che manda un'email a Fabio, poi eventualmente anche a 
 - [ ] Anti spam su tutti i moduli
 
 ## Legale (da far controllare a un professionista)
+- [ ] Traduzioni italiane di Privacy, Cookie, Termini e modulo di iscrizione: da rileggere
 - [ ] Banner cookie con consenso prima di caricare YouTube, Vimeo, Calendly, MailerLite (Complianz è sparito con WordPress)
 - [ ] Privacy Policy: togliere Complianz e Google Analytics se non più usati, aggiungere i servizi reali (Formspree, Brevo, MailerLite, Calendly, GreenGeeks)
 - [ ] Cookie Policy: allinearla al nuovo banner

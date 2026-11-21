@@ -19,6 +19,9 @@ Copia 1:1 di thebreathworkway.com, ricostruita una pagina al giorno. Anteprima c
 Vedi GO-LIVE.md (cosa è pronto e cosa resta). `python3 tools/golive.py` crea dist/ per GreenGeeks.
 Pagine rinominate nella copia: /privacy-policy/ (era /cookie-policy-copy/), /cookies-policy/ (era /contact-copy/), /terms-conditions/ (era /terms-conditions-2/), /behind-the-guilt-of-slowing-down/ (era guild). finalize.py le gestisce da sé.
 
+## Italiano
+Pagine italiane in /it/ generate da tools/i18n.py (traduzioni in tools/i18n/it.json, chiave = testo inglese). finalize.py le rigenera da solo: se una pagina inglese cambia, i testi nuovi restano in inglese finché non si aggiungono a it.json (lo script li elenca).
+
 ## Da ricordare
 - Moduli (newsletter, contatti, prenotazioni) da collegare
 - Framework: modulo newsletter (MailerLite) da collegare
@@ -34,6 +37,5 @@ Pagine rinominate nella copia: /privacy-policy/ (era /cookie-policy-copy/), /coo
 - Newsletter MailerLite presente anche in Contact, Nervous System Test, pagine legali, articoli, Retreats, Breathwork Ceremony, Registration Form: da collegare
 - Sul live /privacy-policy/ e /cookies-policy/ danno 404 (footer di articoli e pagine legali): nella copia sono gli indirizzi giusti
 - /offerings/ sul live dà 404: nella copia i link vanno a /breathwork-lisbon/
-- Font Lora e Assistant copiati in assets/bcf-fonts (il server live li blocca per altri domini)
-- Menu in alto ancora in Inter (dal tema Astra): portarlo ad Archivo
+- Font: solo Antonio e Archivo in assets/fonts; tutti gli altri diventano Archivo (tools/seo.py)
 - Immagini ancora collegate al sito WordPress: sostituire con la cartella foto

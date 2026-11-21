@@ -14,7 +14,7 @@ function pagesWithFixes() {
   const out = [];
   const add = (slug, f) => { if (fs.readFileSync(f, 'utf8').includes('tbw-hfix-')) out.push([slug, f]); };
   add('home', path.join(ROOT, 'index.html'));
-  for (const d of fs.readdirSync(ROOT)) { const f = path.join(ROOT, d, 'index.html'); if (fs.existsSync(f)) add(d, f); }
+  for (const d of fs.readdirSync(ROOT)) { if (d === 'it' || d === 'dist') continue; const f = path.join(ROOT, d, 'index.html'); if (fs.existsSync(f)) add(d, f); }
   return out;
 }
 
