@@ -45,6 +45,10 @@ for p in pages:
     t = t.replace('href="%s"' % LIVE, 'href="%s"' % (up or './'))
     if depth:
         t = t.replace('href="./"', 'href="../"')
+    # vecchi indirizzi delle pagine legali (sul live danno 404 o reindirizzano): portati alle pagine giuste,
+    # come fa già il footer delle altre pagine
+    for a, b in (('privacy-policy', 'cookie-policy-copy'), ('cookies-policy', 'contact-copy'), ('terms-conditions', 'terms-conditions-2')):
+        t = t.replace('href="%s%s/"' % (LIVE, a), 'href="%s%s/"' % (up, b))
     for d in copied:
         t = t.replace('href="%s%s/"' % (LIVE, d), 'href="%s%s/"' % (up, d))
     open(p, 'w', encoding='utf-8').write(t)
