@@ -15,6 +15,10 @@ Copia 1:1 di thebreathworkway.com, ricostruita una pagina al giorno. Anteprima c
 - [x] Pagine legali: /cookie-policy-copy/, /terms-conditions-2/, /contact-copy/ (21 nov 2026)
 - [x] Extra trovate nei link: 3 articoli di Insights, /retreats/, /breathwork-ceremony/, /registration-form-bw-ceremony/ (21 nov 2026)
 
+## Messa online
+Vedi GO-LIVE.md (cosa è pronto e cosa resta). `python3 tools/golive.py` crea dist/ per GreenGeeks.
+Pagine rinominate nella copia: /privacy-policy/ (era /cookie-policy-copy/), /cookies-policy/ (era /contact-copy/), /terms-conditions/ (era /terms-conditions-2/), /behind-the-guilt-of-slowing-down/ (era guild). finalize.py le gestisce da sé.
+
 ## Da ricordare
 - Moduli (newsletter, contatti, prenotazioni) da collegare
 - Framework: modulo newsletter (MailerLite) da collegare
@@ -28,9 +32,8 @@ Copia 1:1 di thebreathworkway.com, ricostruita una pagina al giorno. Anteprima c
 - Contact: modulo contatti (Fluent Forms, WordPress) da collegare
 - Nervous System Test: modulo Brevo (sibforms) da collegare
 - Newsletter MailerLite presente anche in Contact, Nervous System Test, pagine legali, articoli, Retreats, Breathwork Ceremony, Registration Form: da collegare
-- Link a /privacy-policy/, /cookies-policy/ e /terms-conditions/ (footer di articoli e pagine legali): nella copia portano a Privacy, Cookie e Termini; sul live /privacy-policy/ e /cookies-policy/ danno ancora 404, da sistemare sul sito
-- Link a /offerings/ nella Home e in Offerings: sul sito live dà errore 404 (pagina inesistente), da sistemare sul sito
+- Sul live /privacy-policy/ e /cookies-policy/ danno 404 (footer di articoli e pagine legali): nella copia sono gli indirizzi giusti
+- /offerings/ sul live dà 404: nella copia i link vanno a /breathwork-lisbon/
 - Font Lora e Assistant copiati in assets/bcf-fonts (il server live li blocca per altri domini)
 - Menu in alto ancora in Inter (dal tema Astra): portarlo ad Archivo
-- I link alle pagine non ancora copiate puntano ancora al sito live
 - Immagini ancora collegate al sito WordPress: sostituire con la cartella foto

@@ -9,8 +9,17 @@ import os, re, sys
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 LIVE = 'https://www.thebreathworkway.com/'
+# indirizzi del live che nella copia hanno un nome più chiaro (sul nuovo hosting: redirect 301 in .htaccess)
+RENAMED = {
+    'cookie-policy-copy': 'privacy-policy',      # contiene la Privacy Policy
+    'contact-copy': 'cookies-policy',            # contiene la Cookie Policy
+    'terms-conditions-2': 'terms-conditions',
+    'behind-the-guild-of-slowing-down': 'behind-the-guilt-of-slowing-down',
+    'offerings': 'breathwork-lisbon',            # /offerings/ sul live dà 404, la pagina Offerings è questa
+}
 
 src, slug = sys.argv[1], sys.argv[2]
+slug = RENAMED.get(slug, slug)
 s = open(src, encoding='utf-8').read()
 s = re.sub(r'<link\b[^>]*rel="(alternate|EditURI|https://api\.w\.org/|shortlink|canonical|pingback)"[^>]*>', '', s)
 s = re.sub(r'<meta\b[^>]*name="generator"[^>]*>', '', s)
@@ -45,11 +54,15 @@ for p in pages:
     t = t.replace('href="%s"' % LIVE, 'href="%s"' % (up or './'))
     if depth:
         t = t.replace('href="./"', 'href="../"')
-    # vecchi indirizzi delle pagine legali (sul live danno 404 o reindirizzano): portati alle pagine giuste,
-    # come fa già il footer delle altre pagine
-    for a, b in (('privacy-policy', 'cookie-policy-copy'), ('cookies-policy', 'contact-copy'), ('terms-conditions', 'terms-conditions-2')):
+    for a, b in RENAMED.items():
         t = t.replace('href="%s%s/"' % (LIVE, a), 'href="%s%s/"' % (up, b))
+        t = re.sub(r'href="((?:\.\./)?)%s/"' % re.escape(a), r'href="\1%s/"' % b, t)
+        t = t.replace('content="%s%s/"' % (LIVE, a), 'content="%s%s/"' % (LIVE, b))
     for d in copied:
         t = t.replace('href="%s%s/"' % (LIVE, d), 'href="%s%s/"' % (up, d))
     open(p, 'w', encoding='utf-8').write(t)
 print('ok', dest, 'pagine copiate:', ['home'] + sorted(copied))
+
+# sistemazioni SEO (titoli, H1/H2, canonical) senza cambiare l'aspetto
+import subprocess
+subprocess.run([sys.executable, os.path.join(ROOT, 'tools', 'seo.py')], check=True)
