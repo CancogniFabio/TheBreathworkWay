@@ -7,7 +7,7 @@ Copia 1:1 di thebreathworkway.com, ricostruita una pagina al giorno. Anteprima c
 - [x] Framework (20 nov 2026)
 - [x] Offerings (21 nov 2026)
 - [x] Corporate Breathwork (21 nov 2026)
-- [ ] Retreats & Events
+- [x] Retreats & Events (21 nov 2026)
 - [ ] About Me
 - [ ] Insights
 - [ ] Contact
@@ -20,6 +20,8 @@ Copia 1:1 di thebreathworkway.com, ricostruita una pagina al giorno. Anteprima c
 - Offerings: modulo newsletter (MailerLite) da collegare
 - Corporate Breathwork: modulo richieste aziende (invia a Formspree come il live) da collegare
 - Corporate Breathwork: modulo newsletter (MailerLite) da collegare
+- Retreats & Events: modulo richieste (tbw-pr-form) da collegare
+- Retreats & Events: modulo newsletter (MailerLite) da collegare
 - Link a /offerings/ nella Home e in Offerings: sul sito live dà errore 404 (pagina inesistente), da sistemare sul sito
 - Menu in alto ancora in Inter (dal tema Astra): portarlo ad Archivo
 - I link alle pagine non ancora copiate puntano ancora al sito live
