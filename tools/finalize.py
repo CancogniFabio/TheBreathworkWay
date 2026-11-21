@@ -39,6 +39,8 @@ for p in pages:
     # sul live lo script di Elementor aggiunge e-lazyloaded quando la sezione entra nello schermo;
     # senza script le immagini di sfondo restano nascoste (su telefono il testo bianco finisce su fondo chiaro)
     t = re.sub(r'class="([^"]*\be-parent\b)(?![^"]*e-lazyloaded)([^"]*)"', r'class="\1\2 e-lazyloaded"', t)
+    # font Lora e Assistant: il server live non li concede ad altri domini, quindi stanno nel repo
+    t = t.replace(LIVE + 'wp-content/bcf-fonts/', up + 'assets/bcf-fonts/')
     t = t.replace('href="./"', 'href="%s"' % (up or './'))
     t = t.replace('href="%s"' % LIVE, 'href="%s"' % (up or './'))
     if depth:

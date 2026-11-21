@@ -31,6 +31,7 @@ Copia 1:1 di thebreathworkway.com, ricostruita una pagina al giorno. Anteprima c
 - Link nel footer a /privacy-policy/ e /cookies-policy/: sul live danno 404, da sistemare sul sito
 - Link a /terms-conditions/: sul live reindirizza a /terms-conditions-2/, nella copia punta ancora al live
 - Link a /offerings/ nella Home e in Offerings: sul sito live dà errore 404 (pagina inesistente), da sistemare sul sito
+- Font Lora e Assistant copiati in assets/bcf-fonts (il server live li blocca per altri domini)
 - Menu in alto ancora in Inter (dal tema Astra): portarlo ad Archivo
 - I link alle pagine non ancora copiate puntano ancora al sito live
 - Immagini ancora collegate al sito WordPress: sostituire con la cartella foto
