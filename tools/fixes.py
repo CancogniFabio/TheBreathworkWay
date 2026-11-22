@@ -20,6 +20,8 @@ for old, new in FIX.items():
         it[new] = it[old]
 json.dump(it, open(itf, 'w'), ensure_ascii=False, indent=0)
 
+ALT = json.load(open(os.path.join(ROOT, 'tools', 'fixes', 'alt-en.json')))
+
 n = 0
 for slug, f in i18n.page_files():
     p = os.path.join(ROOT, f)
@@ -34,6 +36,14 @@ for slug, f in i18n.page_files():
             else:
                 i18n.fill(node, v)
             changed = True; n += 1
+    # emoji di WordPress (immagini da s.w.org) -> emoji normali
+    for img in soup.select('img.emoji'):
+        img.replace_with(NavigableString(img.get('alt', ''))); changed = True
+    for img in soup.find_all('img'):
+        if not (img.get('alt') or '').strip():
+            name = (img.get('src') or '').rsplit('/', 1)[-1]
+            if name in ALT:
+                img['alt'] = ALT[name]; changed = True
     head = soup.head
     if head.title and head.title.string and i18n.norm(head.title.string) in FIX:
         head.title.string = FIX[i18n.norm(head.title.string)]; changed = True

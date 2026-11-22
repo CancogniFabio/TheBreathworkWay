@@ -1,0 +1,121 @@
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@type": "Place",
+   "@id": "https://www.thebreathworkway.com/#place",
+   "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": "38.70336795354217",
+    "longitude": " -9.19986433103702"
+   },
+   "hasMap": "https://www.google.com/maps/search/?api=1&amp;query=38.70336795354217, -9.19986433103702",
+   "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Rua das Mercês 30",
+    "addressCountry": "PT",
+    "addressRegion": "Lisboa",
+    "postalCode": "1300-408",
+    "addressLocality": "Ajuda"
+   }
+  },
+  {
+   "@type": [
+    "ProfessionalService",
+    "Organization"
+   ],
+   "@id": "https://www.thebreathworkway.com/#organization",
+   "name": "The Breathwork Way",
+   "url": "https://www.thebreathworkway.com",
+   "email": "hello@thebreathworkway.com",
+   "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Rua das Mercês 30",
+    "addressCountry": "PT",
+    "addressRegion": "Lisboa",
+    "postalCode": "1300-408",
+    "addressLocality": "Ajuda"
+   },
+   "logo": {
+    "@type": "ImageObject",
+    "@id": "https://www.thebreathworkway.com/#logo",
+    "url": "https://www.thebreathworkway.com/wp-content/uploads/2025/09/cropped-icon.png",
+    "contentUrl": "https://www.thebreathworkway.com/wp-content/uploads/2025/09/cropped-icon.png",
+    "caption": "The Breathwork Way",
+    "inLanguage": "en-US",
+    "width": "512",
+    "height": "512"
+   },
+   "priceRange": "€€€",
+   "openingHours": [
+    "Monday,Tuesday,Wednesday,Thursday,Friday,Saturday,Sunday 09:00-17:00"
+   ],
+   "description": "Breathwork and nervous system regulation for founders, CEOs and high-performing leaders. Based in Lisbon, working across Europe. Combining Polyvagal Theory, somatic psychology and conscious connected breathwork.",
+   "vatID": "Italian P.IVA: 12824440015",
+   "location": {
+    "@id": "https://www.thebreathworkway.com/#place"
+   },
+   "image": {
+    "@id": "https://www.thebreathworkway.com/#logo"
+   }
+  },
+  {
+   "@type": "WebSite",
+   "@id": "https://www.thebreathworkway.com/#website",
+   "url": "https://www.thebreathworkway.com",
+   "name": "The Breathwork Way",
+   "publisher": {
+    "@id": "https://www.thebreathworkway.com/#organization"
+   },
+   "inLanguage": "en-US",
+   "potentialAction": {
+    "@type": "SearchAction",
+    "target": "https://www.thebreathworkway.com/?s={search_term_string}",
+    "query-input": "required name=search_term_string"
+   }
+  },
+  {
+   "@type": "ImageObject",
+   "@id": "https://www.thebreathworkway.com/wp-content/uploads/2026/06/breathwork-6-06-3077-683x1024.jpg",
+   "url": "https://www.thebreathworkway.com/wp-content/uploads/2026/06/breathwork-6-06-3077-683x1024.jpg",
+   "width": "200",
+   "height": "200",
+   "inLanguage": "en-US"
+  },
+  {
+   "@type": "WebPage",
+   "@id": "https://www.thebreathworkway.com/#webpage",
+   "url": "https://www.thebreathworkway.com/",
+   "name": "Breathwork in Lisbon | Nervous System Regulation for Leaders",
+   "datePublished": "2026-02-23T13:59:11+00:00",
+   "dateModified": "2026-11-11T17:25:26+00:00",
+   "about": {
+    "@id": "https://www.thebreathworkway.com/#organization"
+   },
+   "isPartOf": {
+    "@id": "https://www.thebreathworkway.com/#website"
+   },
+   "primaryImageOfPage": {
+    "@id": "https://www.thebreathworkway.com/wp-content/uploads/2026/06/breathwork-6-06-3077-683x1024.jpg"
+   },
+   "inLanguage": "en-US"
+  },
+  {
+   "@type": "Service",
+   "name": "Breathwork in Lisbon | Nervous System Regulation for Leaders",
+   "description": "Discover breathwork in Lisbon with The Breathwork Way. Nervous system regulation and somatic coaching for high-performing founders and CEOs",
+   "serviceType": "Breathwork and Nervous System Coaching",
+   "offers": {
+    "@type": "Offer",
+    "availability": "InStock"
+   },
+   "image": {
+    "@id": "https://www.thebreathworkway.com/wp-content/uploads/2026/06/breathwork-6-06-3077-683x1024.jpg"
+   },
+   "@id": "https://www.thebreathworkway.com/#schema-37390",
+   "mainEntityOfPage": {
+    "@id": "https://www.thebreathworkway.com/#webpage"
+   }
+  }
+ ]
+}

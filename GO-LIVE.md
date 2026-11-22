@@ -19,10 +19,13 @@ Aggiornato il 21 nov 2026.
 - [x] Menu mobile funzionante (senza gli script di WordPress non si apriva)
 
 ## Da fare (Claude, quando il computer di Fabio è acceso)
-- [ ] Copiare nel repo solo le immagini e i video usati davvero nelle pagine (niente libreria media intera)
-- [ ] Rimettere i dati strutturati (JSON-LD di Rank Math) presi dal live
-- [ ] Testo alternativo per le 13 immagini senza alt
-- [ ] Scaricare la sitemap del live per trovare eventuali pagine o articoli non copiati e aggiungere i redirect
+- [x] Solo le immagini usate davvero, nel repo (assets/media, 185 file, 24 MB). Nessun riferimento al vecchio WordPress
+- [x] Dati strutturati (JSON-LD di Rank Math) ripuliti: indirizzi nuovi, immagini locali, profili social, versione italiana
+- [x] Testo alternativo per le 12 immagini che non l'avevano (inglese e italiano)
+- [x] Emoji di WordPress sostituite da emoji normali
+
+## Pagine del live non copiate (decide Fabio: copiarle, reindirizzarle o lasciarle sparire)
+Dalla sitemap del live: /coherent-breathing/, /box-breathing/, /centering-process/, /daily-breathwork/, /breathwork-session/, /online-breathwork/, /free-gift/, /sandys-retreat/, /health-questionnaire-faro/, /desert-way-form/, /desert-way-feedback-form/, /evaluacion-del-sistema-nervioso-elevare88/, /respiracion-cuadrada/, /respiracion-coherente-2/, negozio WooCommerce (/shop/, /product/daily-breathing-practice/, /cart/, /checkout-2/, /my-account/)
 
 ## Moduli (uno alla volta, decide Fabio)
 Obiettivo: modulo normale che manda un'email a Fabio, poi eventualmente anche a Brevo.

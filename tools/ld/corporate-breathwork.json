@@ -1,0 +1,138 @@
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@type": "Place",
+   "@id": "https://www.thebreathworkway.com/#place",
+   "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": "38.70336795354217",
+    "longitude": " -9.19986433103702"
+   },
+   "hasMap": "https://www.google.com/maps/search/?api=1&amp;query=38.70336795354217, -9.19986433103702",
+   "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Rua das Mercês 30",
+    "addressCountry": "PT",
+    "addressRegion": "Lisboa",
+    "postalCode": "1300-408",
+    "addressLocality": "Ajuda"
+   }
+  },
+  {
+   "@type": [
+    "ProfessionalService",
+    "Organization"
+   ],
+   "@id": "https://www.thebreathworkway.com/#organization",
+   "name": "The Breathwork Way",
+   "url": "https://www.thebreathworkway.com",
+   "email": "hello@thebreathworkway.com",
+   "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Rua das Mercês 30",
+    "addressCountry": "PT",
+    "addressRegion": "Lisboa",
+    "postalCode": "1300-408",
+    "addressLocality": "Ajuda"
+   },
+   "logo": {
+    "@type": "ImageObject",
+    "@id": "https://www.thebreathworkway.com/#logo",
+    "url": "https://www.thebreathworkway.com/wp-content/uploads/2025/09/cropped-icon.png",
+    "contentUrl": "https://www.thebreathworkway.com/wp-content/uploads/2025/09/cropped-icon.png",
+    "caption": "The Breathwork Way",
+    "inLanguage": "en-US",
+    "width": "512",
+    "height": "512"
+   },
+   "priceRange": "€€€",
+   "openingHours": [
+    "Monday,Tuesday,Wednesday,Thursday,Friday,Saturday,Sunday 09:00-17:00"
+   ],
+   "description": "Breathwork and nervous system regulation for founders, CEOs and high-performing leaders. Based in Lisbon, working across Europe. Combining Polyvagal Theory, somatic psychology and conscious connected breathwork.",
+   "vatID": "Italian P.IVA: 12824440015",
+   "location": {
+    "@id": "https://www.thebreathworkway.com/#place"
+   },
+   "image": {
+    "@id": "https://www.thebreathworkway.com/#logo"
+   }
+  },
+  {
+   "@type": "WebSite",
+   "@id": "https://www.thebreathworkway.com/#website",
+   "url": "https://www.thebreathworkway.com",
+   "name": "The Breathwork Way",
+   "publisher": {
+    "@id": "https://www.thebreathworkway.com/#organization"
+   },
+   "inLanguage": "en-US"
+  },
+  {
+   "@type": "ImageObject",
+   "@id": "https://www.thebreathworkway.com/wp-content/uploads/2026/09/Re.png",
+   "url": "https://www.thebreathworkway.com/wp-content/uploads/2026/09/Re.png",
+   "width": "200",
+   "height": "200",
+   "inLanguage": "en-US"
+  },
+  {
+   "@type": "BreadcrumbList",
+   "@id": "https://www.thebreathworkway.com/corporate-breathwork/#breadcrumb",
+   "itemListElement": [
+    {
+     "@type": "ListItem",
+     "position": "1",
+     "item": {
+      "@id": "https://www.thebreathworkway.com",
+      "name": "Home"
+     }
+    },
+    {
+     "@type": "ListItem",
+     "position": "2",
+     "item": {
+      "@id": "https://www.thebreathworkway.com/corporate-breathwork/",
+      "name": "Corporate Breathwork"
+     }
+    }
+   ]
+  },
+  {
+   "@type": "WebPage",
+   "@id": "https://www.thebreathworkway.com/corporate-breathwork/#webpage",
+   "url": "https://www.thebreathworkway.com/corporate-breathwork/",
+   "name": "Corporate Breathwork Lisbon | Team Wellness &amp; Offsites",
+   "datePublished": "2026-05-27T12:13:22+00:00",
+   "dateModified": "2026-11-12T21:03:48+00:00",
+   "isPartOf": {
+    "@id": "https://www.thebreathworkway.com/#website"
+   },
+   "primaryImageOfPage": {
+    "@id": "https://www.thebreathworkway.com/wp-content/uploads/2026/09/Re.png"
+   },
+   "inLanguage": "en-US",
+   "breadcrumb": {
+    "@id": "https://www.thebreathworkway.com/corporate-breathwork/#breadcrumb"
+   }
+  },
+  {
+   "@type": "Service",
+   "name": "Corporate Breathwork Lisbon | Team Wellness &amp; Offsites",
+   "description": "Corporate breathwork sessions and retreats for teams and leadership in Lisbon. Nervous system regulation, for offsites, team building, sales kickoff",
+   "serviceType": "Corporate Breathwork and Nervous System Coaching",
+   "offers": {
+    "@type": "Offer",
+    "availability": "InStock"
+   },
+   "image": {
+    "@id": "https://www.thebreathworkway.com/wp-content/uploads/2026/09/Re.png"
+   },
+   "@id": "https://www.thebreathworkway.com/corporate-breathwork/#schema-37453",
+   "mainEntityOfPage": {
+    "@id": "https://www.thebreathworkway.com/corporate-breathwork/#webpage"
+   }
+  }
+ ]
+}

@@ -257,6 +257,30 @@ def build():
                     vv = v.replace("'", "\\'") if True else v
                     js = js.replace("'%s'" % o, "'%s'" % vv).replace('"%s"' % o, '"%s"' % v.replace('"', '\\"'))
             s.string = js
+        ld = soup.find('script', id='tbw-ld')
+        if ld and ld.string:
+            path_ = '' if slug == 'home' else slug + '/'
+            enu, itu = LIVE + path_, LIVE + 'it/' + path_
+            j = json.loads(ld.string.replace('<\\/', '</'))
+            def walk(o):
+                if isinstance(o, dict):
+                    for k2, v2 in list(o.items()):
+                        if isinstance(v2, str):
+                            if k2 in ('@id', 'url') and (v2 == enu or v2.startswith(enu + '#')) and o.get('@type') not in ('WebSite',):
+                                o[k2] = itu + v2[len(enu):]
+                            elif k2 == 'inLanguage':
+                                o[k2] = 'it-IT'
+                            elif k2 in ('name', 'headline', 'description') and norm(v2) in it:
+                                o[k2] = BeautifulSoup(it[norm(v2)], 'html.parser').get_text()
+                        else:
+                            walk(v2)
+                elif isinstance(o, list):
+                    for x in o:
+                        walk(x)
+            for n in j.get('@graph', []):
+                if n.get('@type') in ('WebPage', 'BlogPosting', 'Article', 'BreadcrumbList', 'Service', 'FAQPage'):
+                    walk(n)
+            ld.string = json.dumps(j, ensure_ascii=False).replace('</', '<\\/')
         if soup.html:
             soup.html['lang'] = 'it-IT'
         can = soup.find('link', rel='canonical')
@@ -266,9 +290,10 @@ def build():
         add_common(soup, slug, 'it')
         out = str(soup)
         # un livello più in profondità: assets e font
-        out = out.replace('"../assets/', '"../../assets/').replace("url(../assets/", "url(../../assets/")
         if slug == 'home':
-            out = out.replace('"assets/', '"../assets/')
+            out = re.sub(r'(?<![\w./-])assets/', '../assets/', out)
+        else:
+            out = re.sub(r'(?<![\w./-])\.\./assets/', '../../assets/', out)
         dest = os.path.join(ROOT, 'it', f)
         os.makedirs(os.path.dirname(dest), exist_ok=True)
         open(dest, 'w', encoding='utf-8').write(out)

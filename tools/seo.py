@@ -133,6 +133,72 @@ def fix_fonts(slug, t):
     return t
 
 
+MEDIA_RE = re.compile(r'(?:https?:)?//(?:www\.)?thebreathworkway\.com/wp-content/(uploads|plugins)/([^"\'\s)<>,]+)')
+
+
+def fix_media(slug, t):
+    """immagini nel repo (assets/media): solo quelle usate davvero, copiate una volta"""
+    up = '' if slug == 'home' else '../'
+    def rep(m):
+        rel = m.group(2) if m.group(1) == 'uploads' else 'plugins/' + m.group(2)
+        if not os.path.exists(os.path.join(ROOT, 'assets', 'media', rel.replace('&amp;', '&'))):
+            return m.group(0)
+        start = m.start()
+        # nei meta (og:image, twitter:image) serve l'indirizzo completo
+        before = t[max(0, start - 60):start]
+        if 'content="' in before.split('<')[-1]:
+            return LIVE + 'assets/media/' + rel
+        return up + 'assets/media/' + rel
+    return MEDIA_RE.sub(rep, t)
+
+
+LD_RENAMED = {'cookie-policy-copy': 'privacy-policy', 'contact-copy': 'cookies-policy', 'terms-conditions-2': 'terms-conditions',
+              'behind-the-guild-of-slowing-down': 'behind-the-guilt-of-slowing-down', 'category/uncategorized': 'insights'}
+SAME_AS = ['https://www.instagram.com/thebreathworkway/', 'https://www.youtube.com/@thebreathworkway', 'https://www.linkedin.com/in/cancognifabio/']
+
+
+def fix_ld(slug, t):
+    """dati strutturati per Google (da Rank Math, ripuliti: indirizzi nuovi, immagini locali, niente ricerca WordPress)"""
+    t = re.sub(r'<script[^>]*id="tbw-ld"[^>]*>.*?</script>', '', t, flags=re.S)
+    f = os.path.join(ROOT, 'tools', 'ld', slug + '.json')
+    if not os.path.exists(f):
+        return t
+    txt = open(f, encoding='utf-8').read()
+    for a, b in LD_RENAMED.items():
+        txt = txt.replace(LIVE + a + '/', LIVE + b + '/')
+    txt = txt.replace('wp-content/uploads/2025/09/cropped-icon.png', 'wp-content/uploads/2025/09/cropped-icon-1-270x270.png')
+    def media(m):
+        rel = m.group(1)
+        for r in (rel, rel + '.webp'):
+            if os.path.exists(os.path.join(ROOT, 'assets', 'media', r)):
+                return LIVE + 'assets/media/' + r
+        return m.group(0)
+    txt = re.sub(r'https://www\.thebreathworkway\.com/wp-content/uploads/([^"\\]+)', media, txt)
+    j = json.loads(txt)
+    def unesc(o):
+        if isinstance(o, dict):
+            return {k: unesc(v) for k, v in o.items()}
+        if isinstance(o, list):
+            return [unesc(x) for x in o]
+        return html.unescape(o) if isinstance(o, str) else o
+    j = unesc(j)
+    for n in j.get('@graph', []):
+        n.pop('potentialAction', None) if n.get('@type') == 'WebSite' else None
+        types = n.get('@type') if isinstance(n.get('@type'), list) else [n.get('@type')]
+        if 'Organization' in types:
+            n['sameAs'] = SAME_AS
+            if isinstance(n.get('logo'), dict):
+                n['logo'].update({'width': '270', 'height': '270'})
+        if n.get('@type') == 'BreadcrumbList':
+            for it in n.get('itemListElement', []):
+                if it.get('item', {}).get('@id', '').rstrip('/').endswith('/insights') and it['item'].get('name', '').lower() == 'uncategorized':
+                    it['item']['name'] = 'Insights'
+        if n.get('@type') == 'WebPage' and slug in META:
+            n['name'], n['description'] = META[slug]
+    js = json.dumps(j, ensure_ascii=False).replace('</', '<\\/')
+    return t.replace('</head>', '<script type="application/ld+json" id="tbw-ld">%s</script></head>' % js, 1)
+
+
 def fix_css(slug, t):
     t = re.sub(r'<style id="tbw-seo-css">.*?</style>', '', t, flags=re.S)
     t = re.sub(r'<style id="tbw-quality">.*?</style>', '', t, flags=re.S)
@@ -150,6 +216,8 @@ for slug, f in pages():
     t = fix_head(slug, t)
     t = fix_headings(slug, t)
     t = fix_fonts(slug, t)
+    t = fix_media(slug, t)
+    t = fix_ld(slug, t)
     t = fix_css(slug, t)
     open(f, 'w', encoding='utf-8').write(t)
 print('seo ok')

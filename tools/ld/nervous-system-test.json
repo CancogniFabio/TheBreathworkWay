@@ -1,0 +1,27 @@
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@type": "BreadcrumbList",
+   "@id": "https://www.thebreathworkway.com/nervous-system-test/#breadcrumb",
+   "itemListElement": [
+    {
+     "@type": "ListItem",
+     "position": "1",
+     "item": {
+      "@id": "https://www.thebreathworkway.com",
+      "name": "Home"
+     }
+    },
+    {
+     "@type": "ListItem",
+     "position": "2",
+     "item": {
+      "@id": "https://www.thebreathworkway.com/nervous-system-test/",
+      "name": "Nervous System Test"
+     }
+    }
+   ]
+  }
+ ]
+}

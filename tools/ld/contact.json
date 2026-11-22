@@ -1,0 +1,139 @@
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@type": "Place",
+   "@id": "https://www.thebreathworkway.com/#place",
+   "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": "38.70336795354217",
+    "longitude": " -9.19986433103702"
+   },
+   "hasMap": "https://www.google.com/maps/search/?api=1&amp;query=38.70336795354217, -9.19986433103702",
+   "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Rua das Mercês 30",
+    "addressCountry": "PT",
+    "addressRegion": "Lisboa",
+    "postalCode": "1300-408",
+    "addressLocality": "Ajuda"
+   }
+  },
+  {
+   "@type": [
+    "ProfessionalService",
+    "Organization"
+   ],
+   "@id": "https://www.thebreathworkway.com/#organization",
+   "name": "The Breathwork Way",
+   "url": "https://www.thebreathworkway.com",
+   "email": "hello@thebreathworkway.com",
+   "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Rua das Mercês 30",
+    "addressCountry": "PT",
+    "addressRegion": "Lisboa",
+    "postalCode": "1300-408",
+    "addressLocality": "Ajuda"
+   },
+   "logo": {
+    "@type": "ImageObject",
+    "@id": "https://www.thebreathworkway.com/#logo",
+    "url": "https://www.thebreathworkway.com/wp-content/uploads/2025/09/cropped-icon.png",
+    "contentUrl": "https://www.thebreathworkway.com/wp-content/uploads/2025/09/cropped-icon.png",
+    "caption": "The Breathwork Way",
+    "inLanguage": "en-US",
+    "width": "512",
+    "height": "512"
+   },
+   "priceRange": "€€€",
+   "openingHours": [
+    "Monday,Tuesday,Wednesday,Thursday,Friday,Saturday,Sunday 09:00-17:00"
+   ],
+   "description": "Breathwork and nervous system regulation for founders, CEOs and high-performing leaders. Based in Lisbon, working across Europe. Combining Polyvagal Theory, somatic psychology and conscious connected breathwork.",
+   "vatID": "Italian P.IVA: 12824440015",
+   "location": {
+    "@id": "https://www.thebreathworkway.com/#place"
+   },
+   "image": {
+    "@id": "https://www.thebreathworkway.com/#logo"
+   }
+  },
+  {
+   "@type": "WebSite",
+   "@id": "https://www.thebreathworkway.com/#website",
+   "url": "https://www.thebreathworkway.com",
+   "name": "The Breathwork Way",
+   "publisher": {
+    "@id": "https://www.thebreathworkway.com/#organization"
+   },
+   "inLanguage": "en-US"
+  },
+  {
+   "@type": "ImageObject",
+   "@id": "https://www.thebreathworkway.com/wp-content/uploads/2026/03/IMG_20260312_080453_TIMEBURST13-e1773497191103.jpg",
+   "url": "https://www.thebreathworkway.com/wp-content/uploads/2026/03/IMG_20260312_080453_TIMEBURST13-e1773497191103.jpg",
+   "width": "489",
+   "height": "663",
+   "caption": "Fabio Cancogni Breathwork for high performers in Lisbon",
+   "inLanguage": "en-US"
+  },
+  {
+   "@type": "BreadcrumbList",
+   "@id": "https://www.thebreathworkway.com/contact/#breadcrumb",
+   "itemListElement": [
+    {
+     "@type": "ListItem",
+     "position": "1",
+     "item": {
+      "@id": "https://www.thebreathworkway.com",
+      "name": "Home"
+     }
+    },
+    {
+     "@type": "ListItem",
+     "position": "2",
+     "item": {
+      "@id": "https://www.thebreathworkway.com/contact/",
+      "name": "Contact"
+     }
+    }
+   ]
+  },
+  {
+   "@type": "ContactPage",
+   "@id": "https://www.thebreathworkway.com/contact/#webpage",
+   "url": "https://www.thebreathworkway.com/contact/",
+   "name": "Book Breathwork session in Lisbon | TheBreathworkWay",
+   "datePublished": "2026-03-15T10:25:02+00:00",
+   "dateModified": "2026-08-03T10:35:48+00:00",
+   "isPartOf": {
+    "@id": "https://www.thebreathworkway.com/#website"
+   },
+   "primaryImageOfPage": {
+    "@id": "https://www.thebreathworkway.com/wp-content/uploads/2026/03/IMG_20260312_080453_TIMEBURST13-e1773497191103.jpg"
+   },
+   "inLanguage": "en-US",
+   "breadcrumb": {
+    "@id": "https://www.thebreathworkway.com/contact/#breadcrumb"
+   }
+  },
+  {
+   "@type": "Service",
+   "name": "Book Breathwork session in Lisbon | TheBreathworkWay",
+   "description": "Book breathwork session in Lisbon with Fabio. Private sessions, group breathwork, retreats and collaboration enquiries. Get in touch today.",
+   "serviceType": "Breathwork and Nervous System Coaching",
+   "offers": {
+    "@type": "Offer",
+    "availability": "InStock"
+   },
+   "image": {
+    "@id": "https://www.thebreathworkway.com/wp-content/uploads/2026/03/IMG_20260312_080453_TIMEBURST13-e1773497191103.jpg"
+   },
+   "@id": "https://www.thebreathworkway.com/contact/#schema-37445",
+   "mainEntityOfPage": {
+    "@id": "https://www.thebreathworkway.com/contact/#webpage"
+   }
+  }
+ ]
+}
