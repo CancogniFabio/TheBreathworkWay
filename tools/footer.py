@@ -77,6 +77,8 @@ def main():
             continue
         t = open(f, encoding='utf-8').read()
         soup = BeautifulSoup(t, 'html.parser')
+        if not soup.find(id='masthead'):
+            continue  # pagina a sé (es. Sandy's Retreat): niente footer del sito
         old = footer_block(soup)
         page_tok = tokens([soup.body]) - (tokens(old) if old else set())
         # link relativi: la Home è alla radice, questa pagina un livello sotto

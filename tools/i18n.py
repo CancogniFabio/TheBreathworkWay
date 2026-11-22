@@ -23,6 +23,10 @@ JS_BAD = re.compile(r'[{}<>]|\.(querySelector|style)|^[.#\[]|https?:|\$\{|^[a-z]
 NOT_TEXT = re.compile(r'^[\s\d.,:;·•|/\\\-–—+*#@%&()\[\]→←↓↑✓✔×€$"\'’“”…!?]*$')
 
 
+# pagine a sé, senza versione italiana
+NO_IT = {'sandys-retreat'}
+
+
 def page_files():
     out = [('home', 'index.html')]
     for d in sorted(os.listdir(ROOT)):
@@ -128,6 +132,8 @@ def attr_texts(soup):
 def extract():
     keys = {}
     for slug, f in page_files():
+        if slug in NO_IT:
+            continue
         soup = BeautifulSoup(open(os.path.join(ROOT, f), encoding='utf-8').read(), 'html.parser')
         for old in soup.select('.tbw-lang'):
             old.decompose()
@@ -209,6 +215,8 @@ def build():
     it = json.load(open(os.path.join(DIR, 'it.json')))
     missing = {}
     for slug, f in page_files():
+        if slug in NO_IT:
+            continue
         src = os.path.join(ROOT, f)
         raw = open(src, encoding='utf-8').read()
         # pagina inglese: solo pulsante + hreflang + menu mobile

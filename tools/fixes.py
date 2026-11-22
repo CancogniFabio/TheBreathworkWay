@@ -36,6 +36,10 @@ for slug, f in i18n.page_files():
             else:
                 i18n.fill(node, v)
             changed = True; n += 1
+    # frammento di script rotto (resto di un header che si nascondeva allo scroll): dava errore in console
+    for sc in soup.find_all('script'):
+        if sc.string and sc.string.lstrip().startswith('if(currentScroll>lastScroll'):
+            sc.decompose(); changed = True
     # emoji di WordPress (immagini da s.w.org) -> emoji normali
     for img in soup.select('img.emoji'):
         img.replace_with(NavigableString(img.get('alt', ''))); changed = True

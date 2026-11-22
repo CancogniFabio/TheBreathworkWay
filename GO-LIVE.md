@@ -25,7 +25,8 @@ Aggiornato il 21 nov 2026.
 - [x] Emoji di WordPress sostituite da emoji normali
 
 ## Pagine del live non copiate (decide Fabio: copiarle, reindirizzarle o lasciarle sparire)
-Dalla sitemap del live: /coherent-breathing/, /box-breathing/, /centering-process/, /daily-breathwork/, /breathwork-session/, /online-breathwork/, /free-gift/, /sandys-retreat/, /health-questionnaire-faro/, /desert-way-form/, /desert-way-feedback-form/, /evaluacion-del-sistema-nervioso-elevare88/, /respiracion-cuadrada/, /respiracion-coherente-2/, negozio WooCommerce (/shop/, /product/daily-breathing-practice/, /cart/, /checkout-2/, /my-account/)
+Copiate (fuori dal menu, con i loro audio): /coherent-breathing/, /box-breathing/, /centering-process/, /sandys-retreat/ (privata: noindex e fuori dalla sitemap).
+Ancora da decidere: /daily-breathwork/, /breathwork-session/, /online-breathwork/, /free-gift/, /health-questionnaire-faro/, /desert-way-form/, /desert-way-feedback-form/, /evaluacion-del-sistema-nervioso-elevare88/, /respiracion-cuadrada/, /respiracion-coherente-2/, negozio WooCommerce (/shop/, /product/daily-breathing-practice/, /cart/, /checkout-2/, /my-account/)
 
 ## Moduli (uno alla volta, decide Fabio)
 Obiettivo: modulo normale che manda un'email a Fabio, poi eventualmente anche a Brevo.
