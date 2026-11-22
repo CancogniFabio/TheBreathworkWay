@@ -13,6 +13,10 @@ Copia 1:1 di thebreathworkway.com, ricostruita una pagina al giorno. Anteprima c
 - [x] Contact (21 nov 2026)
 - [x] Nervous System Test (21 nov 2026)
 - [x] Pagine legali: /cookie-policy-copy/, /terms-conditions-2/, /contact-copy/ (21 nov 2026)
+- [ ] Coherent Breathing /coherent-breathing/ (ha audio: copiare anche i file audio; non nel menu)
+- [ ] Box Breathing /box-breathing/ (ha audio; non nel menu)
+- [ ] Centering Process /centering-process/ (ha audio; non nel menu)
+- [ ] Sandy's Retreat /sandys-retreat/ (non nel menu)
 - [x] Extra trovate nei link: 3 articoli di Insights, /retreats/, /breathwork-ceremony/, /registration-form-bw-ceremony/ (21 nov 2026)
 
 ## Messa online
