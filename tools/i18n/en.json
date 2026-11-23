@@ -668,6 +668,29 @@
 "retreats-events",
 "terms-conditions"
 ],
+"One email a week. Unsubscribe anytime. <a>Privacy Policy</a>": [
+"about-me",
+"behind-the-guilt-of-slowing-down",
+"box-breathing",
+"breathwork-ceremony",
+"breathwork-for-stress-and-anxiety-science",
+"breathwork-lisbon",
+"breathwork-vs-meditation-for-executives",
+"centering-process",
+"coherent-breathing",
+"contact",
+"cookies-policy",
+"corporate-breathwork",
+"framework",
+"home",
+"insights",
+"nervous-system-test",
+"privacy-policy",
+"registration-form-bw-ceremony",
+"retreats",
+"retreats-events",
+"terms-conditions"
+],
 "Thank you": [
 "about-me",
 "behind-the-guilt-of-slowing-down",
@@ -1646,6 +1669,11 @@
 "Ready for the next one? <a>Try Coherent Breathing</a>": [
 "box-breathing"
 ],
+"Play or pause": [
+"box-breathing",
+"centering-process",
+"coherent-breathing"
+],
 "Box Breathing - The Breathwork Way": [
 "box-breathing"
 ],
@@ -1880,8 +1908,7 @@
 ],
 "Pregnancy": [
 "breathwork-ceremony",
-"framework",
-"terms-conditions"
+"framework"
 ],
 "Cardiovascular conditions": [
 "breathwork-ceremony",
@@ -2622,9 +2649,6 @@
 "Music Only": [
 "centering-process"
 ],
-"Play or pause": [
-"centering-process"
-],
 "Centering Process - The Breathwork Way": [
 "centering-process"
 ],
@@ -2823,6 +2847,9 @@
 "Your Message": [
 "contact"
 ],
+"I use your details only to reply to your message, as described in my <a>Privacy Policy</a>.": [
+"contact"
+],
 "Submit Form": [
 "contact"
 ],
@@ -2866,134 +2893,48 @@
 "Cookie Policy": [
 "cookies-policy"
 ],
-"Last updated: March 18, 2026": [
+"Last updated: November 23, 2026": [
 "cookies-policy",
 "privacy-policy",
 "terms-conditions"
 ],
-"This Cookie Policy explains what cookies are and how we use them on our website. You should read this policy so you can understand what types of cookies we use, what information we collect through cookies, and how that information is used.": [
+"What cookies are": [
 "cookies-policy"
 ],
-"Cookies do not typically contain any information that personally identifies you, but personal information that we store about you may be linked to the information obtained from cookies. For further details about how we process and protect your personal data, please refer to our Privacy Policy.": [
+"Cookies are small text files that a website saves on your device to remember something on your next visit. Similar technologies, such as third-party scripts that read information from your browser, follow the same rules.": [
 "cookies-policy"
 ],
-"We do not store sensitive personal information, such as mailing addresses or account passwords, in the cookies we use.": [
+"What this website uses": [
 "cookies-policy"
 ],
-"Interpretation and Definitions": [
-"cookies-policy",
-"privacy-policy",
-"terms-conditions"
-],
-"For the purposes of this Cookie Policy:": [
+"This website only uses what is technically needed to work. It does not use profiling cookies, advertising pixels, Google Analytics or other third-party analytics tools.": [
 "cookies-policy"
 ],
-"<strong>Company</strong> (referred to as “The Breathwork Way”, “we”, “us” or “our”) refers to The Breathwork Way.": [
+"Fonts, images and audio files are hosted on my own server, so visiting the website does not send your IP address to Google or other providers. Technical cookies do not need your consent (art. 122 of the Italian Privacy Code and the guidelines of the Italian Garante of 10 June 2021), which is why the website shows no cookie banner.": [
 "cookies-policy"
 ],
-"<strong>Cookies</strong> means small text files placed on your computer, mobile device, or other device by a website, containing details of your browsing activity among other uses.": [
+"Forms and external links": [
 "cookies-policy"
 ],
-"<strong>Website</strong> refers to The Breathwork Way, accessible at www.thebreathworkway.com.": [
-"cookies-policy",
-"privacy-policy",
-"terms-conditions"
-],
-"<strong>You</strong> means the individual accessing or using the Website.": [
+"What you type in a form is sent only when you press the submit button, to the services listed in the <a>Privacy Policy</a>. Links to Instagram, YouTube, LinkedIn, WhatsApp, Telegram and Calendly open those websites, which apply their own cookies under their own policies.": [
 "cookies-policy"
 ],
-"How We Use Cookies": [
+"If something changes": [
 "cookies-policy"
 ],
-"We use both <strong>session cookies</strong> (which are deleted when you close your browser) and <strong>persistent cookies</strong> (which remain until deleted) for the purposes described below.": [
+"If I add analytics, advertising tools or embedded content such as videos or maps, I will ask for your consent before activating them, with a banner that lets you accept, refuse or choose by category, and I will update this page.": [
 "cookies-policy"
 ],
-"<strong>Necessary / Essential Cookies</strong>": [
+"Managing cookies in your browser": [
 "cookies-policy"
 ],
-"Type: Session cookies": [
+"You can always delete or block cookies in your browser settings. Blocking technical cookies may stop some parts of the website from working.": [
 "cookies-policy"
 ],
-"Administered by: Us": [
+"Contact": [
 "cookies-policy"
 ],
-"Purpose: These cookies are essential to provide you with the services available through our website and to enable basic site functionality, such as remembering your cookie preferences and ensuring the site operates correctly.": [
-"cookies-policy"
-],
-"<strong>Functionality Cookies</strong>": [
-"cookies-policy"
-],
-"Type: Persistent cookies": [
-"cookies-policy"
-],
-"Purpose: These cookies allow us to remember your preferences and improve your experience, for example remembering your preferred language so you do not have to re-enter your choices each time you visit.": [
-"cookies-policy"
-],
-"<strong>Analytics and Performance Cookies</strong>": [
-"cookies-policy"
-],
-"Administered by: Third party services": [
-"cookies-policy"
-],
-"Purpose: These cookies help us understand how visitors use our website, for example which pages are most popular or how users navigate the site, so we can improve functionality and content. Third party services including Google Analytics and site optimisation tools may also set cookies on your device. These third parties have their own privacy policies governing how they use such information.": [
-"cookies-policy"
-],
-"Your Choices Regarding Cookies": [
-"cookies-policy"
-],
-"If you prefer to avoid the use of cookies on the website, you can disable them in your browser settings and delete any cookies already stored. Please note that disabling cookies may affect the functionality and user experience of the website.": [
-"cookies-policy"
-],
-"You can find instructions for managing cookies in the following popular browsers:": [
-"cookies-policy"
-],
-"Google Chrome": [
-"cookies-policy"
-],
-"Mozilla Firefox": [
-"cookies-policy"
-],
-"Safari": [
-"cookies-policy"
-],
-"Microsoft Edge": [
-"cookies-policy"
-],
-"Cookie Consent Banner": [
-"cookies-policy"
-],
-"When you visit our website for the first time, you will see a <strong>cookie consent banner</strong>. This banner informs you about our use of cookies and gives you the option to accept or reject non-essential cookies.": [
-"cookies-policy"
-],
-"By selecting <strong>“Accept”</strong> you consent to the use of cookies as described in this policy. You can choose to reject non-essential cookies or adjust your preferences at any time.": [
-"cookies-policy"
-],
-"Your consent preferences are stored for record-keeping purposes and to ensure we respect your choices.": [
-"cookies-policy"
-],
-"You can modify or withdraw your consent at any time by:": [
-"cookies-policy"
-],
-"Revisiting the cookie settings link displayed in the footer of our website": [
-"cookies-policy"
-],
-"Clearing your browser cookies directly": [
-"cookies-policy"
-],
-"Our cookie consent banner is powered by <strong>Complianz</strong>, which helps us manage user preferences in compliance with <strong>GDPR</strong> and <strong>ePrivacy</strong> regulations.": [
-"cookies-policy"
-],
-"More Information": [
-"cookies-policy"
-],
-"To learn more about cookies and how they work, visit: All About Cookies.": [
-"cookies-policy"
-],
-"Contact Us": [
-"cookies-policy",
-"privacy-policy"
-],
-"If you have any questions about this Cookie Policy you can contact us by email at <strong>hello@thebreathworkway.com</strong>.": [
+"The data controller is Fabio Cancogni, trading as The Breathwork Way, Italian VAT number (P.IVA) 12824440015, tax domicile Via Cà Sottane (privata Zanetin), 18013 Diano Marina (IM), Italy, working in Lisbon, Portugal. Questions: <a>hello@thebreathworkway.com</a>.": [
 "cookies-policy"
 ],
 "Cookie Policy | The Breathwork Way": [
@@ -3792,7 +3733,10 @@
 "Message": [
 "corporate-breathwork"
 ],
-"I agree to <a>terms and conditions</a> provided by the company. By providing my phone number and email, I agree to receive text messages from the business.": [
+"Send me breathe on sunday too, my weekly email (optional).": [
+"corporate-breathwork"
+],
+"I use your details only to reply to your request, as described in my <a>Privacy Policy</a>.": [
 "corporate-breathwork"
 ],
 "We've received your request and will reach out within 48 hours with a tailored proposal for your team.": [
@@ -3852,7 +3796,6 @@
 ],
 "Phone number": [
 "corporate-breathwork",
-"privacy-policy",
 "retreats-events"
 ],
 "Corporate Breathwork Lisbon | Team Wellness & Offsites": [
@@ -4258,7 +4201,7 @@
 "Enter your name and email to receive your complete nervous system breakdown and personalised plan.": [
 "nervous-system-test"
 ],
-"We respect your privacy. Your details are only used to send your results and occasional notes from The Breathwork Way, never shared, unsubscribe any time.": [
+"Your details are used to send your results and occasional emails from The Breathwork Way. Never sold, unsubscribe in one click. <a>Privacy Policy</a>": [
 "nervous-system-test"
 ],
 "Nervous System Assessment | TheBreathworkWay": [
@@ -4778,202 +4721,118 @@
 "Privacy Policy": [
 "privacy-policy"
 ],
-"This Privacy Policy describes our policies and procedures on the collection, use and disclosure of your information when you use our website and tells you about your privacy rights and how the law protects you.": [
+"This policy explains, in plain words, what personal data I collect through thebreathworkway.com and in my work with you, why, and what your rights are.": [
 "privacy-policy"
 ],
-"We use your personal data to provide and improve our service. By using the website, you agree to the collection and use of information in accordance with this Privacy Policy.": [
+"Who is responsible for your data": [
 "privacy-policy"
 ],
-"The words whose initial letters are capitalised have meanings defined under the following conditions. The following definitions shall have the same meaning regardless of whether they appear in singular or in plural.": [
-"privacy-policy",
-"terms-conditions"
-],
-"<strong>Company</strong> (referred to as “The Breathwork Way”, “we”, “us” or “our”) refers to The Breathwork Way, operated by Fabio Cancogni, based in Lisbon, Portugal.": [
-"privacy-policy",
-"terms-conditions"
-],
-"<strong>Cookies</strong> means small files placed on your computer, mobile device or any other device by a website, containing details of your browsing history among other uses.": [
+"The data controller is Fabio Cancogni, trading as The Breathwork Way, Italian VAT number (P.IVA) 12824440015, tax domicile Via Cà Sottane (privata Zanetin), 18013 Diano Marina (IM), Italy, working in Lisbon, Portugal. For any question about your data, write to <a>hello@thebreathworkway.com</a>.": [
 "privacy-policy"
 ],
-"<strong>Country</strong> refers to Portugal.": [
-"privacy-policy",
-"terms-conditions"
-],
-"<strong>Device</strong> means any device that can access the service such as a computer, a mobile phone or a digital tablet.": [
-"privacy-policy",
-"terms-conditions"
-],
-"<strong>Personal Data</strong> is any information that relates to an identified or identifiable individual.": [
+"What I collect, where and why": [
 "privacy-policy"
 ],
-"<strong>Service</strong> refers to the website.": [
-"privacy-policy",
-"terms-conditions"
-],
-"<strong>Service Provider</strong> means any natural or legal person who processes data on behalf of the Company. It refers to third party companies or individuals employed by the Company to facilitate the service, to provide the service on behalf of the Company, or to assist the Company in analysing how the service is used.": [
+"<strong>Newsletter “breathe on sunday”</strong>: your email address, to send you the weekly email. Legal basis: your consent (art. 6.1.a GDPR), given when you join. You can unsubscribe at any time with the link in every email.": [
 "privacy-policy"
 ],
-"<strong>Usage Data</strong> refers to data collected automatically, either generated by the use of the service or from the service infrastructure itself.": [
+"<strong>Contact form, email, WhatsApp and Telegram</strong>: your name, contact details and message, to reply to you. Legal basis: steps you ask for before a contract, or my legitimate interest in replying (art. 6.1.b and 6.1.f GDPR).": [
 "privacy-policy"
 ],
-"<strong>You</strong> means the individual accessing or using the website.": [
+"<strong>Corporate and private retreat enquiries</strong>: name, organisation, contact details, dates, budget and the details you share, to prepare a proposal. Legal basis: steps you ask for before a contract (art. 6.1.b GDPR).": [
 "privacy-policy"
 ],
-"Types of Data Collected": [
+"<strong>Nervous System Test</strong>: your name, email, age, country and answers, to calculate your results and email them to you. Legal basis: your request (art. 6.1.b GDPR). You also receive my occasional emails, as stated next to the form, and you can unsubscribe at any time.": [
 "privacy-policy"
 ],
-"While using our website, we may ask you to provide us with certain personally identifiable information that can be used to contact or identify you. This may include:": [
+"<strong>Session registration form</strong>: contact details, age and information about your health, emotional wellbeing and life situation, so I can keep you safe during the session. Health information is special category data (art. 9 GDPR): I only collect it with your explicit consent (art. 9.2.a GDPR), which you give in the form and can withdraw at any time.": [
 "privacy-policy"
 ],
-"Email address": [
+"<strong>Bookings and payments</strong>: the data needed to schedule sessions, issue invoices and receive payments. Legal basis: performance of the contract and legal obligations (art. 6.1.b and 6.1.c GDPR).": [
 "privacy-policy"
 ],
-"First name and last name": [
+"<strong>Photos and videos at events and retreats</strong>: I only publish images in which you can be recognised with your consent, which you can withdraw at any time.": [
 "privacy-policy"
 ],
-"Usage data is collected automatically when using the service and may include information such as your device’s IP address, browser type, browser version, the pages of our website that you visit, the time and date of your visit, the time spent on those pages, and other diagnostic data.": [
+"I do not use your data for profiling or automated decisions, and I do not sell it.": [
 "privacy-policy"
 ],
-"GDPR Compliance": [
+"Who receives your data": [
 "privacy-policy"
 ],
-"Under the GDPR, you have the following rights regarding your personal data:": [
+"I share your data only with the services I need to run my work, which process it on my behalf under a data processing agreement (art. 28 GDPR):": [
 "privacy-policy"
 ],
-"The right to access your personal data": [
+"GreenGeeks: website hosting and email": [
 "privacy-policy"
 ],
-"The right to rectify inaccurate personal data": [
+"MailerLite (UAB MailerLite, Lithuania): newsletter": [
 "privacy-policy"
 ],
-"The right to request erasure of your personal data": [
+"Brevo (Sendinblue SAS, France): emails with the Nervous System Test results": [
 "privacy-policy"
 ],
-"The right to restrict or object to processing": [
+"Formspree: delivery of the website forms to my inbox": [
 "privacy-policy"
 ],
-"The right to data portability": [
+"Make (Celonis): automation that prepares and sends the Nervous System Test results": [
 "privacy-policy"
 ],
-"The right to withdraw consent at any time": [
+"Calendly: booking of calls and sessions, when you use the booking link": [
 "privacy-policy"
 ],
-"We only collect and process your personal data when we have a lawful basis to do so, including:": [
+"Payment providers such as Wise or Revolut, venues and partners of a retreat, my accountant and public authorities, when the law requires it, act as independent controllers and receive only what they need. Health information is never shared, except in a medical emergency or when the law requires it.": [
 "privacy-policy"
 ],
-"When it is necessary for performing a contract, for example processing a booking or enquiry": [
+"Transfers outside the European Union": [
 "privacy-policy"
 ],
-"When you have given your consent, for example subscribing to our newsletter": [
+"Some of these services, such as Formspree and Calendly, may process data in the United States. In that case the transfer is based on the EU-US Data Privacy Framework or on the Standard Contractual Clauses approved by the European Commission.": [
 "privacy-policy"
 ],
-"When required to comply with legal obligations": [
+"How long I keep your data": [
 "privacy-policy"
 ],
-"If you wish to exercise any of these rights or have questions about how your data is used, please contact us at <strong>hello@thebreathworkway.com</strong>.": [
+"Newsletter: until you unsubscribe": [
 "privacy-policy"
 ],
-"Third Party Services and Integrations": [
+"Enquiries and test results that do not lead to working together: up to 24 months after our last contact": [
 "privacy-policy"
 ],
-"<strong>MailerLite (Email Marketing and Newsletter Management)</strong>": [
+"Session registration forms: for as long as we work together and up to 24 months after your last session, then deleted": [
 "privacy-policy"
 ],
-"We use MailerLite to manage our email communications, including newsletters, updates and session information. When you sign up for our newsletter, MailerLite stores your name and email address on secure servers in compliance with GDPR. You can unsubscribe at any time by clicking the unsubscribe link in any of our emails or by contacting us directly. You can read MailerLite’s Privacy Policy at <a>mailerlite.com/legal/privacy-policy</a>.": [
+"Invoices and accounting records: 10 years, as required by tax law": [
 "privacy-policy"
 ],
-"<strong>Google Analytics</strong>": [
+"Photos and videos: until you withdraw your consent": [
 "privacy-policy"
 ],
-"We use Google Analytics to understand how visitors use our website. Google Analytics collects usage data including pages visited, time spent on the site, and device information. This data is anonymised and used solely to improve our website. You can opt out of Google Analytics tracking by installing the Google Analytics opt-out browser add-on.": [
+"Security": [
 "privacy-policy"
 ],
-"Tracking Technologies and Cookies": [
+"The website uses an encrypted connection (HTTPS) and I keep your data with care, giving access only to the services listed above. If a breach of your data could put your rights at risk, I will notify the supervisory authority within 72 hours and, when required, you too.": [
 "privacy-policy"
 ],
-"We use cookies and similar tracking technologies to track activity on our website and store certain information. For full details on how we use cookies please refer to our <a>Cookie Policy</a>.": [
+"Your rights": [
 "privacy-policy"
 ],
-"How We Use Your Personal Data": [
+"Under articles 15 to 22 of the GDPR you can ask me at any time to access, correct or delete your data, to restrict or object to its use, and to receive it in a portable format. You can withdraw any consent at any time, without affecting what happened before. Write to <a>hello@thebreathworkway.com</a>: I reply within one month.": [
 "privacy-policy"
 ],
-"The Company may use your personal data for the following purposes:": [
+"You can also lodge a complaint with a supervisory authority, for example the Italian Garante per la protezione dei dati personali (<a>garanteprivacy.it</a>) or the Portuguese Comissão Nacional de Proteção de Dados (<a>cnpd.pt</a>).": [
 "privacy-policy"
 ],
-"To provide and maintain our website and services": [
+"Cookies": [
 "privacy-policy"
 ],
-"To respond to your enquiries and manage your requests": [
+"This website does not use profiling cookies or analytics. Details are in the <a>Cookie Policy</a>.": [
 "privacy-policy"
 ],
-"To send you newsletters, session updates and relevant communications when you have opted in": [
+"Age and changes": [
 "privacy-policy"
 ],
-"To analyse usage trends and improve our website and offerings": [
-"privacy-policy"
-],
-"To comply with legal obligations": [
-"privacy-policy"
-],
-"Retention of Your Personal Data": [
-"privacy-policy"
-],
-"We will retain your personal data only for as long as is necessary for the purposes set out in this Privacy Policy. We will retain and use your personal data to the extent necessary to comply with our legal obligations, resolve disputes, and enforce our agreements and policies.": [
-"privacy-policy"
-],
-"Transfer of Your Personal Data": [
-"privacy-policy"
-],
-"Your information, including personal data, may be processed at locations outside your country of residence where data protection laws may differ. We will take all steps reasonably necessary to ensure your data is treated securely and in accordance with this Privacy Policy. No transfer of your personal data will take place to an organisation or country unless adequate controls are in place.": [
-"privacy-policy"
-],
-"Deletion of Your Personal Data": [
-"privacy-policy"
-],
-"You have the right to request that we delete the personal data we have collected about you. To make such a request please contact us at <strong>hello@thebreathworkway.com</strong>. Please note that we may need to retain certain information where we have a legal obligation to do so.": [
-"privacy-policy"
-],
-"Disclosure of Your Personal Data": [
-"privacy-policy"
-],
-"We may disclose your personal data in the following circumstances:": [
-"privacy-policy"
-],
-"<strong>Legal requirements:</strong> if required to do so by law or in response to valid requests by public authorities such as a court or government agency": [
-"privacy-policy"
-],
-"<strong>Business transfers:</strong> if the Company is involved in a merger, acquisition or asset sale, your personal data may be transferred. We will provide notice before this occurs.": [
-"privacy-policy"
-],
-"<strong>Protection of rights:</strong> when necessary to protect and defend the rights or property of the Company, prevent wrongdoing, or protect the personal safety of users": [
-"privacy-policy"
-],
-"Security of Your Personal Data": [
-"privacy-policy"
-],
-"The security of your personal data is important to us. While we strive to use commercially reasonable means to protect your personal data, no method of transmission over the internet or electronic storage is 100% secure and we cannot guarantee absolute security.": [
-"privacy-policy"
-],
-"Children’s Privacy": [
-"privacy-policy"
-],
-"Our website does not address anyone under the age of 13. We do not knowingly collect personally identifiable information from anyone under the age of 13. If you are a parent or guardian and believe your child has provided us with personal data, please contact us and we will take steps to remove that information.": [
-"privacy-policy"
-],
-"Links to Other Websites": [
-"privacy-policy",
-"terms-conditions"
-],
-"Our website may contain links to other websites not operated by us. We strongly advise you to review the privacy policy of every site you visit. We have no control over and assume no responsibility for the content or privacy practices of any third party sites or services.": [
-"privacy-policy"
-],
-"Changes to This Privacy Policy": [
-"privacy-policy"
-],
-"We may update our Privacy Policy from time to time. We will notify you of any changes by posting the new Privacy Policy on this page and updating the date at the top. You are advised to review this Privacy Policy periodically for any changes.": [
-"privacy-policy"
-],
-"If you have any questions about this Privacy Policy you can contact us by email at <strong>hello@thebreathworkway.com</strong>.": [
+"My website and services are for adults. I do not knowingly collect data from anyone under 18: if you think a minor has sent me their data, write to me and I will delete it. I may update this policy: the valid version is always the one on this page, with the date at the top.": [
 "privacy-policy"
 ],
 "Privacy Policy | The Breathwork Way": [
@@ -5314,8 +5173,7 @@
 "registration-form-bw-ceremony"
 ],
 "Acknowledgement": [
-"registration-form-bw-ceremony",
-"terms-conditions"
+"registration-form-bw-ceremony"
 ],
 "I have carefully read this document and understand its content. I am aware that by signing, I am voluntarily waiving certain legal rights.": [
 "registration-form-bw-ceremony"
@@ -6019,109 +5877,76 @@
 "Terms &amp; Conditions": [
 "terms-conditions"
 ],
-"Please read these Terms and Conditions carefully before using our website.": [
+"Who I am": [
 "terms-conditions"
 ],
-"<strong>Terms and Conditions</strong> (also referred to as “Terms”) mean these Terms and Conditions that form the entire agreement between you and the Company regarding the use of the website.": [
+"These terms apply to the website thebreathworkway.com and to the sessions, programmes, events, retreats and digital products of Fabio Cancogni, trading as The Breathwork Way, Italian VAT number (P.IVA) 12824440015, tax domicile Via Cà Sottane (privata Zanetin), 18013 Diano Marina (IM), Italy, working in Lisbon, Portugal. Contact: <a>hello@thebreathworkway.com</a>.": [
 "terms-conditions"
 ],
-"<strong>Third Party Social Media Service</strong> means any services or content provided by a third party that may be displayed, included or made available by the service.": [
+"By using the website or booking a service you accept these terms. My services are for adults: by booking you confirm that you are over 18.": [
 "terms-conditions"
 ],
-"<strong>You</strong> means the individual accessing or using the website, or the company or other legal entity on behalf of which such individual is accessing or using the website.": [
+"Bookings and payment": [
 "terms-conditions"
 ],
-"These are the Terms and Conditions governing the use of this website and the agreement that operates between you and the Company. These Terms set out the rights and obligations of all users regarding the use of the website.": [
+"Prices are shown on the website or in the proposal I send you, and include any applicable taxes. A booking is confirmed when you receive my confirmation and complete the payment requested. Programmes, retreats and corporate projects may have specific conditions, which I send you in writing before you book and which prevail over these terms.": [
 "terms-conditions"
 ],
-"Your access to and use of the website is conditioned on your acceptance of and compliance with these Terms. These Terms apply to all visitors, users and others who access or use the website.": [
+"Rescheduling and cancellations": [
 "terms-conditions"
 ],
-"By accessing or using the website you agree to be bound by these Terms. If you disagree with any part of these Terms you may not access the website.": [
+"<strong>1-on-1 sessions</strong>: you can move or cancel a session free of charge up to 24 hours before it starts. Later cancellations and no-shows are charged in full.": [
 "terms-conditions"
 ],
-"You represent that you are over the age of 18. The Company does not permit those under 18 to use the website.": [
+"<strong>Group events</strong>: tickets can be refunded up to 48 hours before the event. After that you can pass your place to someone else.": [
 "terms-conditions"
 ],
-"Please read our <a>Privacy Policy</a> carefully before using our website.": [
+"<strong>Programmes and retreats</strong>: the conditions sent to you before booking apply.": [
 "terms-conditions"
 ],
-"Digital Products and Online Courses": [
+"<strong>If I have to cancel</strong>, I offer you a new date or a full refund of what you paid.": [
 "terms-conditions"
 ],
-"Our services may include the sale of digital products, online courses and downloadable materials. By purchasing or accessing any digital content you acknowledge that:": [
+"For services booked online you have a 14-day right of withdrawal, unless the service is linked to a specific date, such as an event or a retreat. If you ask me to start a session or programme within those 14 days and then withdraw, you pay only for the part already delivered.": [
 "terms-conditions"
 ],
-"All sales are final": [
+"Digital products": [
 "terms-conditions"
 ],
-"Once a product is accessed or downloaded, no refunds can be issued unless required by law": [
+"For audio files, courses and other digital content you have a 14-day right of withdrawal. You lose it only when, at purchase, you expressly ask for immediate access and acknowledge that you will lose the right once the download or streaming starts.": [
 "terms-conditions"
 ],
-"Safety Disclaimer and Waiver": [
+"Health and safety": [
 "terms-conditions"
 ],
-"The sessions, workshops and retreats offered through this website are intended for personal growth, relaxation and wellbeing. They are not a substitute for medical advice, diagnosis or treatment.": [
+"My sessions, events and retreats support relaxation, wellbeing and personal growth. They are not a substitute for medical or psychological diagnosis or treatment. Breathwork may not be suitable for everyone: if you have serious heart, respiratory or circulatory conditions, epilepsy, are pregnant, or live with severe mental health conditions, please talk to your doctor first and tell me before the session.": [
 "terms-conditions"
 ],
-"Before participating, please note that our practices may not be suitable for everyone. Individuals with the following conditions are advised to consult a medical professional first, or may need to avoid participation:": [
+"You take part voluntarily and you can stop at any moment. Please share any relevant health information in the registration form, so I can adapt the practice and keep you safe.": [
 "terms-conditions"
 ],
-"Serious heart, respiratory or circulatory conditions": [
+"Liability": [
 "terms-conditions"
 ],
-"Epilepsy or seizure disorders": [
+"I am liable for the correct delivery of my services according to the law. I am not liable for damage caused by information you did not share, by not following the instructions given during the practice, or by third parties outside my control. Nothing in these terms limits liability for death or personal injury caused by negligence, for wilful misconduct or gross negligence, or your rights as a consumer.": [
 "terms-conditions"
 ],
-"Severe mental health conditions, including uncontrolled anxiety, psychosis or trauma related disorders": [
+"Intellectual property": [
 "terms-conditions"
 ],
-"By booking or attending a session you acknowledge that you participate voluntarily and at your own risk. You agree to release and hold harmless the facilitators, instructors and the Company from any liability arising from participation.": [
+"Audio files, videos, texts and materials of The Breathwork Way are protected by copyright. When you buy or receive them, you get a personal licence for private use. You may not copy, share, resell or publish them without my written permission.": [
 "terms-conditions"
 ],
-"We strongly encourage open communication. Please inform us of any medical conditions or concerns prior to your session so we can ensure your safety and the best possible experience.": [
+"Links to other websites": [
 "terms-conditions"
 ],
-"Our website may contain links to third party websites or services that are not owned or controlled by the Company. The Company has no control over and assumes no responsibility for the content, privacy policies or practices of any third party websites or services.": [
+"The website links to services such as Instagram, YouTube, Calendly, Wise and Revolut. I am not responsible for their content or their privacy practices.": [
 "terms-conditions"
 ],
-"We use third party services to facilitate certain features of our website. Your data may be shared with these services solely for the purposes described in our Privacy Policy. We do not store your full payment information on our servers.": [
+"Complaints and applicable law": [
 "terms-conditions"
 ],
-"We strongly advise you to read the terms and conditions and privacy policies of any third party websites or services that you visit.": [
-"terms-conditions"
-],
-"Intellectual Property and Usage Rights": [
-"terms-conditions"
-],
-"All materials provided through The Breathwork Way, including audio files, videos, text and downloadable resources, are the exclusive property of The Breathwork Way. By purchasing or accessing any of our content you agree that:": [
-"terms-conditions"
-],
-"You are granted a personal, non-transferable licence for private use only": [
-"terms-conditions"
-],
-"You may not reproduce, distribute, share, resell or make commercial use of any materials, in whole or in part, without our prior written consent": [
-"terms-conditions"
-],
-"You may not upload our materials to public platforms or share them with others, whether for free or for payment": [
-"terms-conditions"
-],
-"Any unauthorised use may result in legal action and termination of access without refund": [
-"terms-conditions"
-],
-"Termination": [
-"terms-conditions"
-],
-"We may terminate or suspend your access immediately, without prior notice or liability, for any reason, including if you breach these Terms. Upon termination your right to use the website will cease immediately.": [
-"terms-conditions"
-],
-"Limitation of Liability": [
-"terms-conditions"
-],
-"The entire liability of the Company under any provision of these Terms shall be limited to the amount actually paid by you through the website, or 100 EUR if you have not purchased anything through the website.": [
-"terms-conditions"
-],
-"To the maximum extent permitted by applicable law, in no event shall the Company be liable for any special, incidental, indirect or consequential damages whatsoever, including but not limited to damages for loss of profits, loss of data, business interruption or personal injury arising out of or in any way related to the use of or inability to use the website, even if the Company has been advised of the possibility of such damages.": [
+"If something did not go as expected, write to <a>hello@thebreathworkway.com</a> and I will reply within 14 days. These terms are governed by Italian law, without prejudice to the mandatory consumer protection of the country where you live. If you are a consumer, the courts of your place of residence are competent, and you can also turn to a recognised alternative dispute resolution body.": [
 "terms-conditions"
 ],
 "Terms & Conditions | The Breathwork Way": [

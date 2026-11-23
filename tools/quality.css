@@ -68,3 +68,11 @@ html, body { overflow-x: clip; }
 
 /* newsletter del footer: stesso aspetto su tutte le pagine (alcune pagine avevano una regola che nascondeva il pulsante) */
 #mlb2-38494543 .ml-button-horizontal { display: block !important; }
+
+/* Privacy: note sotto i moduli (nov 2026) */
+.tbw-nl-note,.tbw-form-note{font-family:Archivo,sans-serif;font-size:13px;line-height:1.5;font-weight:300;margin:10px 0 0;opacity:.85}
+.tbw-nl-note a,.tbw-form-note a{color:inherit;text-decoration:underline}
+/* Link dentro i testi sottolineati, per chi non distingue i colori */
+.elementor-widget-text-editor p a,.elementor-widget-text-editor li a{text-decoration:underline}
+/* Pagine legali: titoli come prima (non maiuscoli, oro) */
+.elementor-element-cb94a80 h2{text-transform:none;color:#B8815E;letter-spacing:normal}

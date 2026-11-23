@@ -38,10 +38,13 @@ Obiettivo: modulo normale che manda un'email a Fabio, poi eventualmente anche a 
 - [ ] Anti spam su tutti i moduli
 
 ## Legale (da far controllare a un professionista)
+- [x] Termini riscritti (23 nov 2026): recesso 14 giorni, prodotti digitali, responsabilità conforme al diritto dei consumatori. Politica di cancellazione (24 ore sessioni, 48 ore eventi) da confermare con Fabio
+- [x] Note privacy su newsletter (footer), Contatti, Corporate (tolto il consenso SMS obbligatorio), Test del sistema nervoso
+- [ ] Test del sistema nervoso: newsletter facoltativa con casella separata (va impostata nel modulo Brevo e nello scenario Make)
 - [ ] Traduzioni italiane di Privacy, Cookie, Termini e modulo di iscrizione: da rileggere
-- [ ] Banner cookie con consenso prima di caricare YouTube, Vimeo, Calendly, MailerLite (Complianz è sparito con WordPress)
-- [ ] Privacy Policy: togliere Complianz e Google Analytics se non più usati, aggiungere i servizi reali (Formspree, Brevo, MailerLite, Calendly, GreenGeeks)
-- [ ] Cookie Policy: allinearla al nuovo banner
+- [x] Banner cookie non serve: il sito non carica nulla da terzi (verificato, tranne le 6 foto di /sandys-retreat/ prese da riadassouel.com e squarespace). Se si aggiungono video, mappe o statistiche serve il banner
+- [x] Privacy Policy riscritta (23 nov 2026): moduli, dati sanitari, MailerLite, Brevo, Formspree, Make, Calendly, GreenGeeks, trasferimenti, conservazione, reclamo a Garante o CNPD
+- [x] Cookie Policy riscritta: solo cookie tecnici, nessun banner
 - [ ] Portogallo: link al Livro de Reclamações Eletrónico, informazioni sulla risoluzione alternativa delle controversie, dati aziendali (nome, NIF, indirizzo) nel footer o nei Termini
 - [ ] Registration Form della cerimonia: contiene dati sanitari, serve consenso esplicito e conservazione sicura
 
