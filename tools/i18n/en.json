@@ -2397,16 +2397,20 @@
 "retreats-events"
 ],
 "Lisbon or online?": [
-"breathwork-lisbon"
+"breathwork-lisbon",
+"contact"
 ],
 "Lisbon": [
-"breathwork-lisbon"
+"breathwork-lisbon",
+"contact"
 ],
 "Online": [
-"breathwork-lisbon"
+"breathwork-lisbon",
+"contact"
 ],
 "Not sure yet": [
 "breathwork-lisbon",
+"contact",
 "corporate-breathwork",
 "retreats-events"
 ],
@@ -2423,7 +2427,8 @@
 "breathwork-lisbon"
 ],
 "Something went wrong. Please write to hello@thebreathworkway.com": [
-"breathwork-lisbon"
+"breathwork-lisbon",
+"contact"
 ],
 "Breathe with me. Click to minimise or open.": [
 "breathwork-lisbon"
@@ -2835,43 +2840,124 @@
 "Send a Message": [
 "contact"
 ],
-"Contact Form Demo": [
+"Full name": [
 "contact"
 ],
-"First Name": [
+"I'm interested in": [
+"contact"
+],
+"Choose one": [
+"contact"
+],
+"A one-to-one session or programme": [
+"contact"
+],
+"Group breathwork and events in Lisbon": [
+"contact"
+],
+"Joining a retreat": [
+"contact"
+],
+"Corporate breathwork for my team": [
+"contact"
+],
+"A collaboration": [
+"contact"
+],
+"Something else": [
 "contact",
-"registration-form-bw-ceremony"
-],
-"I'm interested in...": [
-"contact"
-],
-"- Select -": [
-"contact"
-],
-"1-1 Session or Programme": [
-"contact"
-],
-"Group Breathwork": [
-"contact"
-],
-"Joining a Retreat": [
-"contact"
-],
-"Collaboration": [
-"contact"
-],
-"Other": [
-"contact",
-"registration-form-bw-ceremony",
 "retreats-events"
 ],
-"Your Message": [
+"Which session?": [
 "contact"
 ],
-"I use your details only to reply to your message, as described in my <a>Privacy Policy</a>.": [
+"Calm my system · Nervous system regulation": [
 "contact"
 ],
-"Submit Form": [
+"Fix how I breathe · Breathing mechanics": [
+"contact"
+],
+"Go deeper · Conscious Connected Breathwork": [
+"contact"
+],
+"Make it last · 6-week programme": [
+"contact"
+],
+"Not sure yet, help me choose": [
+"contact"
+],
+"Which one?": [
+"contact"
+],
+"Weekly Breathwork": [
+"contact",
+"retreats-events"
+],
+"Breathwork Ceremony": [
+"contact",
+"retreats-events"
+],
+"Breathwork and Ocean Dip": [
+"contact"
+],
+"Which retreat?": [
+"contact"
+],
+"The Desert Way · Morocco, 21-27 April 2027": [
+"contact"
+],
+"A private retreat for my group": [
+"contact"
+],
+"Company": [
+"contact"
+],
+"Which format?": [
+"contact"
+],
+"Single session · 60-90 min": [
+"contact"
+],
+"Deep immersion · 2-3 h": [
+"contact"
+],
+"Weekly reset programme": [
+"contact"
+],
+"Corporate retreat · one or more days": [
+"contact"
+],
+"Not sure yet, let's talk": [
+"contact"
+],
+"How many people?": [
+"contact"
+],
+"What kind of collaboration?": [
+"contact"
+],
+"I organise retreats": [
+"contact"
+],
+"Event, festival or conference": [
+"contact"
+],
+"Wellness venue or studio": [
+"contact"
+],
+"Content, podcast or media": [
+"contact"
+],
+"Your message": [
+"contact"
+],
+"Send message": [
+"contact"
+],
+"Your details are only used to reply to your message. <a>Privacy Policy</a>": [
+"contact"
+],
+"Thank you, your message has been sent. I'll get back to you within 48 hours.": [
 "contact"
 ],
 "Contact Information": [
@@ -2900,10 +2986,6 @@
 ],
 "If you’re organising a retreat or event and would like to explore collaboration, please reach out with details about your vision.": [
 "contact"
-],
-"Email Address": [
-"contact",
-"registration-form-bw-ceremony"
 ],
 "Book Breathwork session in Lisbon | TheBreathworkWay": [
 "contact"
@@ -4866,6 +4948,9 @@
 "A little about <em>you</em>": [
 "registration-form-bw-ceremony"
 ],
+"First Name": [
+"registration-form-bw-ceremony"
+],
 "Please enter your first name.": [
 "registration-form-bw-ceremony"
 ],
@@ -4873,6 +4958,9 @@
 "registration-form-bw-ceremony"
 ],
 "Please enter your last name.": [
+"registration-form-bw-ceremony"
+],
+"Email Address": [
 "registration-form-bw-ceremony"
 ],
 "Please enter a valid email address.": [
@@ -4898,6 +4986,10 @@
 ],
 "Google": [
 "registration-form-bw-ceremony"
+],
+"Other": [
+"registration-form-bw-ceremony",
+"retreats-events"
 ],
 "Please select an option.": [
 "registration-form-bw-ceremony"
@@ -5689,16 +5781,10 @@
 "Every week<small>60 min</small>": [
 "retreats-events"
 ],
-"Weekly Breathwork": [
-"retreats-events"
-],
 "Teja House, Cais do Sodré · max 25": [
 "retreats-events"
 ],
 "New date soon<small>Half day</small>": [
-"retreats-events"
-],
-"Breathwork Ceremony": [
 "retreats-events"
 ],
 "Dhara by Sadhana · max 12": [
@@ -5768,9 +5854,6 @@
 "retreats-events"
 ],
 "A celebration": [
-"retreats-events"
-],
-"Something else": [
 "retreats-events"
 ],
 "Group size": [

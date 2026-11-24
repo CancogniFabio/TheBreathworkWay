@@ -163,6 +163,41 @@
     });
   }
 
+  /* ---------- Contatti: modulo che si apre in base a cosa interessa ---------- */
+  var cf = document.querySelector('.tbw-contact-form');
+  if (cf) {
+    var pick = cf.querySelector('select[name="interest"]');
+    var subs = [].slice.call(cf.querySelectorAll('.tbw-sub'));
+    function show() {
+      subs.forEach(function (d) {
+        var on = d.getAttribute('data-for') === pick.value;
+        d.classList.toggle('on', on);
+        [].forEach.call(d.querySelectorAll('input, select, textarea'), function (x) { x.disabled = !on; });
+      });
+    }
+    pick.addEventListener('change', show);
+    show();
+    cf.addEventListener('submit', function (e) {
+      e.preventDefault();
+      var bad = [].filter.call(cf.querySelectorAll('[required]'), function (x) { return !x.disabled && !x.checkValidity(); });
+      [].forEach.call(cf.querySelectorAll('.tbw-bad'), function (x) { x.classList.remove('tbw-bad'); });
+      if (bad.length) { bad.forEach(function (x) { x.classList.add('tbw-bad'); }); bad[0].focus(); return; }
+      var btn = cf.querySelector('button[type="submit"]');
+      var sub = cf.querySelector('.tbw-sub.on select');
+      cf.querySelector('input[name="_subject"]').value = 'Contact: ' + pick.options[pick.selectedIndex].text +
+        (sub ? ' · ' + sub.options[sub.selectedIndex].value : '');
+      btn.disabled = true;
+      fetch(cf.action, { method: 'POST', body: new FormData(cf), headers: { Accept: 'application/json' } })
+        .then(function (r) {
+          if (!r.ok) throw 0;
+          cf.querySelector('.tbw-apply-ok').hidden = false;
+          cf.querySelector('.tbw-apply-err').hidden = true;
+          [].forEach.call(cf.querySelectorAll('label, .tbw-sub, .tbw-modal-send'), function (x) { x.style.display = 'none'; });
+        })
+        .catch(function () { cf.querySelector('.tbw-apply-err').hidden = false; btn.disabled = false; });
+    });
+  }
+
   /* ---------- immagini delle cipolle: anteprima subito, il disegno animato la sostituisce quando è pronto ---------- */
   [].forEach.call(document.querySelectorAll('canvas[data-tbw-preview]'), function (cv) {
     var img = new Image();

@@ -129,7 +129,76 @@ def retreats(soup):
         col.append(wrap)
 
 
-PAGES = {'index.html': home, 'framework/index.html': framework, 'breathwork-lisbon/index.html': offerings,
+CONTACT_FORM = """<form class="tbw-contact-form" action="%s" method="POST" novalidate>
+<input type="hidden" name="_subject" value="Contact form">
+<label><span>Full name</span><input type="text" name="name" autocomplete="name" required></label>
+<label><span>Email</span><input type="email" name="email" autocomplete="email" required></label>
+<label><span>I'm interested in</span><select name="interest" required>
+<option value="">Choose one</option>
+<option value="1-1">A one-to-one session or programme</option>
+<option value="group">Group breathwork and events in Lisbon</option>
+<option value="retreat">Joining a retreat</option>
+<option value="corporate">Corporate breathwork for my team</option>
+<option value="collab">A collaboration</option>
+<option value="other">Something else</option>
+</select></label>
+<div class="tbw-sub" data-for="1-1"><label><span>Which session?</span><select name="session">
+<option value="Calm my system">Calm my system · Nervous system regulation</option>
+<option value="Fix how I breathe">Fix how I breathe · Breathing mechanics</option>
+<option value="Go deeper">Go deeper · Conscious Connected Breathwork</option>
+<option value="Make it last">Make it last · 6-week programme</option>
+<option value="Not sure yet">Not sure yet, help me choose</option>
+</select></label>
+<label><span>Lisbon or online?</span><select name="where">
+<option value="Lisbon">Lisbon</option><option value="Online">Online</option><option value="Not sure yet">Not sure yet</option>
+</select></label></div>
+<div class="tbw-sub" data-for="group"><label><span>Which one?</span><select name="event">
+<option value="Weekly Breathwork">Weekly Breathwork</option>
+<option value="Breathwork Ceremony">Breathwork Ceremony</option>
+<option value="Breathwork and Ocean Dip">Breathwork and Ocean Dip</option>
+</select></label></div>
+<div class="tbw-sub" data-for="retreat"><label><span>Which retreat?</span><select name="retreat">
+<option value="The Desert Way, Morocco, 21-27 April 2027">The Desert Way · Morocco, 21-27 April 2027</option>
+<option value="Private retreat for my group">A private retreat for my group</option>
+</select></label></div>
+<div class="tbw-sub" data-for="corporate"><label><span>Company</span><input type="text" name="company" autocomplete="organization"></label>
+<label><span>Which format?</span><select name="format">
+<option value="Single session">Single session · 60-90 min</option>
+<option value="Deep immersion">Deep immersion · 2-3 h</option>
+<option value="Weekly reset programme">Weekly reset programme</option>
+<option value="Corporate retreat">Corporate retreat · one or more days</option>
+<option value="Not sure yet">Not sure yet, let's talk</option>
+</select></label>
+<label><span>How many people?</span><input type="text" name="team_size" inputmode="numeric"></label></div>
+<div class="tbw-sub" data-for="collab"><label><span>What kind of collaboration?</span><select name="collaboration">
+<option value="Retreat">I organise retreats</option>
+<option value="Event or conference">Event, festival or conference</option>
+<option value="Wellness venue or studio">Wellness venue or studio</option>
+<option value="Content or media">Content, podcast or media</option>
+<option value="Other">Something else</option>
+</select></label></div>
+<label><span>Your message</span><textarea name="message" rows="5"></textarea></label>
+<button type="submit" class="tbw-modal-send">Send message</button>
+<p class="tbw-form-note">Your details are only used to reply to your message. <a href="../privacy-policy/">Privacy Policy</a></p>
+<p class="tbw-apply-ok" hidden>Thank you, your message has been sent. I'll get back to you within 48 hours.</p>
+<p class="tbw-apply-err" hidden>Something went wrong. Please write to hello@thebreathworkway.com</p>
+</form>""" % BOOK_ACTION
+
+
+def contact(soup):
+    w = soup.select_one('.elementor-element-78e9bec')
+    if w and not w.select_one('.tbw-contact-form'):
+        box = w.select_one('.elementor-widget-container') or w
+        box.clear()
+        box.append(BeautifulSoup(CONTACT_FORM, 'html.parser'))
+        w['data-widget_type'] = 'html.default'
+        w['class'] = [c for c in w.get('class', []) if c != 'elementor-widget-shortcode'] + ['elementor-widget-html']
+    # stili e script di Fluent Forms non servono più
+    for el in soup.select('link[href*="fluentform"], link[id*="fluent"], style[id*="fluent"], script[src*="fluentform"], script[id*="fluent"]'):
+        el.decompose()
+
+
+PAGES = {'contact/index.html': contact, 'index.html': home, 'framework/index.html': framework, 'breathwork-lisbon/index.html': offerings,
          'corporate-breathwork/index.html': corporate, 'retreats-events/index.html': retreats}
 
 for f, fn in PAGES.items():

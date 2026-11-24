@@ -1670,15 +1670,45 @@ html body .elementor-2551 .elementor-element-3659481 > .e-con { width: 100% !imp
 .hfe-posts-grid .hfe-post-date { font-family: Archivo, sans-serif !important; font-size: 13px !important; letter-spacing: 1.5px !important; text-transform: uppercase; color: #86601F !important; }
 .hfe-posts-grid .hfe-post-excerpt { font-family: Archivo, sans-serif !important; font-size: 16px !important; line-height: 1.65 !important; font-weight: 300 !important; color: #3A4542 !important; margin: 14px 0 18px !important; }
 .hfe-posts-grid .hfe-read-more { font-family: Archivo, sans-serif !important; font-size: 15px !important; letter-spacing: .5px; color: #86601F !important; text-decoration: none !important; }
-@media (min-width: 768px) and (max-width: 1024px) {
-  .hfe-posts-grid { grid-template-columns: 1fr !important; gap: 24px !important; }
-  .hfe-posts-grid .hfe-post-card { padding: 40px 44px !important; }
+.hfe-posts-grid { grid-template-columns: 1fr !important; gap: 24px !important; max-width: 900px; margin-left: auto !important; margin-right: auto !important; }
+@media (min-width: 768px) {
+  .elementor-3021 .elementor-element-225f68b { --content-width: min(100%, 980px) !important; }
+  .hfe-posts-grid .hfe-post-card { padding: 44px 52px !important; }
 }
+
+/* ---------- articoli del blog: titoli con Antonio come nel resto del sito ---------- */
+body.single-post .elementor-widget-text-editor h3, body.single-post .elementor-widget-heading h3.elementor-heading-title {
+  font-family: Antonio, sans-serif !important; font-weight: 300 !important; font-size: clamp(30px, 3.4vw, 38px) !important;
+  line-height: 1.15 !important; letter-spacing: 0 !important; margin: 1.6em 0 .5em !important;
+}
+body.single-post .elementor-widget-text-editor h3:first-child { margin-top: 0 !important; }
+body.single-post .elementor-widget-heading h3.elementor-heading-title { margin-top: 0 !important; font-size: clamp(22px, 2.4vw, 26px) !important; line-height: 1.35 !important; }
+body.single-post .elementor-widget-text-editor h3 strong, body.single-post .elementor-widget-text-editor h3 b { font-weight: 500 !important; }
+
+/* ---------- Contatti: informazioni e Retreat Collaborations affiancate ---------- */
+@media (min-width: 768px) {
+  html body .elementor-2551 .elementor-element-3659481 > .elementor-element-798d945 {
+    max-width: 980px !important; display: grid !important; grid-template-columns: 1fr 1fr; column-gap: 48px; row-gap: 6px; align-items: start;
+  }
+  .elementor-2551 .elementor-element-798d945 > :not(.elementor-element-baf5b49) { grid-column: 1; width: 100% !important; }
+  .elementor-2551 .elementor-element-798d945 > .elementor-element-baf5b49 { grid-column: 2; grid-row: 1 / span 7; align-self: center; margin: 0 !important; max-width: none !important; }
+}
+
+/* ---------- Contatti: il modulo si apre in base a cosa interessa ---------- */
+.tbw-contact-form { text-align: left; }
+.tbw-sub { display: none; border-left: 2px solid #B8815E; padding: 4px 0 2px 18px; margin: 4px 0 18px; }
+.tbw-sub.on { display: block; animation: tbwIn .35s ease; }
+@keyframes tbwIn { from { opacity: 0; transform: translateY(-4px); } to { opacity: 1; transform: none; } }
+.tbw-contact-form .tbw-bad { border-color: #9A3B2A !important; outline: 1px solid #9A3B2A; }
+
+/* ---------- bottoni e campi sempre con angoli dritti, come nel resto del sito ---------- */
+html body :is(.elementor-button, button, input[type="submit"], input[type="button"], .bwo-btn, .bwm-btn, .tbw-fw-btn, .tbw-dw-more, .hfe-read-more, input[type="text"], input[type="email"], input[type="tel"], select, textarea) { border-radius: 0 !important; }
+html body .ml-form-embedContainer :is(button, input) { border-radius: 0 !important; }
 
 /* ---------- pulsante lingua ---------- */
 /* computer: un riquadro che si nota, senza esagerare */
 html body #ast-hf-menu-1 > .tbw-lang > a.menu-link {
-  border: 1px solid currentColor; border-radius: 999px; padding: 4px 13px !important; margin-left: 10px;
+  border: 1px solid currentColor; border-radius: 0; padding: 4px 13px !important; margin-left: 10px;
   line-height: 1.3 !important; opacity: 1 !important; font-weight: 600; font-size: 13px !important; letter-spacing: .12em;
 }
 html body #ast-hf-menu-1 > .tbw-lang > a.menu-link:hover { background: #86601F; color: #fff !important; border-color: #86601F; }
@@ -1686,7 +1716,7 @@ html body #ast-hf-menu-1 > .tbw-lang > a.menu-link:hover { background: #86601F; 
 /* telefono e tablet: sempre visibile accanto al menu */
 .tbw-lang-m {
   display: inline-flex; align-items: center; justify-content: center; margin-right: 10px;
-  min-width: 40px; height: 30px; padding: 0 11px; border: 1px solid #86601F; border-radius: 999px;
+  min-width: 40px; height: 30px; padding: 0 11px; border: 1px solid #86601F; border-radius: 0;
   font-family: Archivo, sans-serif; font-size: 13px; font-weight: 600; letter-spacing: .12em; line-height: 1;
   color: #86601F !important; text-decoration: none !important; background: transparent;
 }
@@ -1704,21 +1734,22 @@ html.tbw-modal-open, html.tbw-modal-open body { overflow: hidden; }
 .tbw-modal-eye { font-family: Archivo, sans-serif; font-size: 14px; letter-spacing: 1.5px; text-transform: uppercase; color: #86601F; margin: 0 0 8px; }
 .tbw-modal-title { font-family: Antonio, sans-serif !important; font-weight: 300 !important; font-size: 38px !important; line-height: 1.1 !important; margin: 0 0 12px !important; color: #1C2724 !important; text-transform: none !important; }
 .tbw-modal-tx { font-family: Archivo, sans-serif; font-size: 16px; line-height: 1.6; font-weight: 300; margin: 0 0 22px; }
-.tbw-apply-form label { display: block; margin: 0 0 14px; }
-.tbw-apply-form label span { display: block; font-family: Archivo, sans-serif; font-size: 13px; letter-spacing: 1px; text-transform: uppercase; color: #3E5F5C; margin-bottom: 6px; }
-.tbw-apply-form :is(input, select, textarea) {
+:is(.tbw-apply-form, .tbw-contact-form) label { display: block; margin: 0 0 14px; }
+:is(.tbw-apply-form, .tbw-contact-form) label span { display: block; font-family: Archivo, sans-serif; font-size: 13px; letter-spacing: 1px; text-transform: uppercase; color: #3E5F5C; margin-bottom: 6px; }
+:is(.tbw-apply-form, .tbw-contact-form) :is(input, select, textarea) {
   width: 100%; box-sizing: border-box; font-family: Archivo, sans-serif; font-size: 16px; color: #1C2724;
   background: #fff; border: 1px solid rgba(28,39,36,.2); border-radius: 0; padding: 12px 14px;
 }
-.tbw-apply-form :is(input, select, textarea):focus { outline: 2px solid #729A94; outline-offset: 0; border-color: #729A94; }
+:is(.tbw-apply-form, .tbw-contact-form) :is(input, select, textarea):focus { outline: 2px solid #729A94; outline-offset: 0; border-color: #729A94; }
 .tbw-modal-send {
   width: 100%; margin-top: 6px; padding: 15px 20px !important; font-family: Archivo, sans-serif !important; font-size: 18px !important;
   color: #fff !important; background: #3E5F5C !important; border: 1px solid #3E5F5C !important; border-radius: 0 !important; cursor: pointer;
 }
 .tbw-modal-send:hover { background: #1C2724 !important; }
-html body .tbw-modal button.tbw-modal-send[type="submit"], html body .tbw-modal button.tbw-modal-send[type="submit"]:not(:hover) { color: #fff !important; }
-.tbw-apply-form select { height: auto !important; min-height: 48px; line-height: 1.4 !important; padding-top: 11px !important; padding-bottom: 11px !important; }
-.tbw-apply-form input { height: auto !important; min-height: 48px; }
+html body :is(.tbw-modal, .tbw-contact-form) button.tbw-modal-send[type="submit"], html body :is(.tbw-modal, .tbw-contact-form) button.tbw-modal-send[type="submit"]:not(:hover) { color: #fff !important; }
+html body .tbw-contact-form :is(input, select, textarea) { background: #fff !important; color: #1C2724 !important; border: 1px solid rgba(28,39,36,.2) !important; box-shadow: none !important; }
+:is(.tbw-apply-form, .tbw-contact-form) select { height: auto !important; min-height: 48px; line-height: 1.4 !important; padding-top: 11px !important; padding-bottom: 11px !important; }
+:is(.tbw-apply-form, .tbw-contact-form) input { height: auto !important; min-height: 48px; }
 .tbw-apply-ok, .tbw-apply-err { font-family: Archivo, sans-serif; font-size: 16px; line-height: 1.5; margin: 16px 0 0; }
 .tbw-apply-ok { color: #3E5F5C; font-size: 18px; }
 .tbw-apply-err { color: #9A3B2A; }
@@ -2084,6 +2115,41 @@ lazyloadBackgroundObserver.unobserve(entry.target)}})},{rootMargin:'200px 0px 20
           [].forEach.call(form.querySelectorAll('label, .tbw-modal-send'), function (x) { x.style.display = 'none'; });
         })
         .catch(function () { form.querySelector('.tbw-apply-err').hidden = false; btn.disabled = false; });
+    });
+  }
+
+  /* ---------- Contatti: modulo che si apre in base a cosa interessa ---------- */
+  var cf = document.querySelector('.tbw-contact-form');
+  if (cf) {
+    var pick = cf.querySelector('select[name="interest"]');
+    var subs = [].slice.call(cf.querySelectorAll('.tbw-sub'));
+    function show() {
+      subs.forEach(function (d) {
+        var on = d.getAttribute('data-for') === pick.value;
+        d.classList.toggle('on', on);
+        [].forEach.call(d.querySelectorAll('input, select, textarea'), function (x) { x.disabled = !on; });
+      });
+    }
+    pick.addEventListener('change', show);
+    show();
+    cf.addEventListener('submit', function (e) {
+      e.preventDefault();
+      var bad = [].filter.call(cf.querySelectorAll('[required]'), function (x) { return !x.disabled && !x.checkValidity(); });
+      [].forEach.call(cf.querySelectorAll('.tbw-bad'), function (x) { x.classList.remove('tbw-bad'); });
+      if (bad.length) { bad.forEach(function (x) { x.classList.add('tbw-bad'); }); bad[0].focus(); return; }
+      var btn = cf.querySelector('button[type="submit"]');
+      var sub = cf.querySelector('.tbw-sub.on select');
+      cf.querySelector('input[name="_subject"]').value = 'Contact: ' + pick.options[pick.selectedIndex].text +
+        (sub ? ' · ' + sub.options[sub.selectedIndex].value : '');
+      btn.disabled = true;
+      fetch(cf.action, { method: 'POST', body: new FormData(cf), headers: { Accept: 'application/json' } })
+        .then(function (r) {
+          if (!r.ok) throw 0;
+          cf.querySelector('.tbw-apply-ok').hidden = false;
+          cf.querySelector('.tbw-apply-err').hidden = true;
+          [].forEach.call(cf.querySelectorAll('label, .tbw-sub, .tbw-modal-send'), function (x) { x.style.display = 'none'; });
+        })
+        .catch(function () { cf.querySelector('.tbw-apply-err').hidden = false; btn.disabled = false; });
     });
   }
 

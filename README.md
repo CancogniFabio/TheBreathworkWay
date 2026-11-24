@@ -43,7 +43,7 @@ Pagine italiane in /it/ generate da tools/i18n.py (traduzioni in tools/i18n/it.j
 - Retreats & Events: modulo newsletter (MailerLite) da collegare
 - About Me: modulo newsletter (MailerLite) da collegare
 - Insights: modulo newsletter (MailerLite) da collegare
-- Contact: modulo contatti (Fluent Forms, WordPress) da collegare
+- Contact: modulo contatti rifatto (tools/layout.py), invia a Formspree xkjgawre come Book this session
 - Nervous System Test: modulo Brevo (sibforms) da collegare
 - Newsletter MailerLite presente anche in Contact, Nervous System Test, pagine legali, articoli, Retreats, Breathwork Ceremony, Registration Form: da collegare
 - Sul live /privacy-policy/ e /cookies-policy/ danno 404 (footer di articoli e pagine legali): nella copia sono gli indirizzi giusti

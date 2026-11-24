@@ -80,3 +80,10 @@ Sezioni a step (1, 2, 3): lo scroll si deve fermare sulla sezione, ogni scroll p
 - [x] Hero di Offerings, Retreats e Framework: foto intera, mai ripetuta, centrata (iPad e telefono)
 - [x] Offerings: tolte le liste Where / Length / You leave with, la durata è nel sottotitolo della scheda
 - [x] Retreats: "starts within yourself." a capo; foto della piscina di nuovo bassa come prima
+
+## Terzo giro (25 nov 2026)
+- [x] Contatti: informazioni e Retreat Collaborations affiancate (telefono una sotto l'altra)
+- [x] Contatti: nuovo modulo (nome e cognome, email, cosa ti interessa con domande che si aprono: sessione individuale, gruppo ed eventi, ritiro, aziende, collaborazione, altro). Invia a Formspree xkjgawre con oggetto "Contact: ..."
+- [x] Bottoni e campi dei moduli con angoli dritti ovunque
+- [x] Blog: una colonna larga anche su iPad orizzontale e computer
+- [x] Articoli del blog: titoli dei paragrafi in Antonio come nel resto del sito
