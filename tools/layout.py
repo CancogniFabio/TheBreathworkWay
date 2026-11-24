@@ -82,6 +82,23 @@ def offerings(soup):
     if m:
         m['data-tbw-pin'] = '.bwm-step'
         m['data-tbw-pin-mode'] = 'hover'
+    # schede: via la lista Where / Length / You leave with, la durata va nel sottotitolo
+    for panel in soup.select('#bwo-options .bwo-panel'):
+        ul = panel.select_one('ul.bwo-facts')
+        tech = panel.select_one('.bwo-tech')
+        if ul and tech and not tech.get('data-tbw-len'):
+            ln = None
+            for li in ul.find_all('li'):
+                sp = li.find_all('span')
+                if len(sp) == 2 and sp[0].get_text(strip=True) == 'Length':
+                    ln = sp[1].get_text(strip=True)
+            if ln:
+                tech.string = tech.get_text(strip=True) + ' · ' + ln
+                tech['data-tbw-len'] = '1'
+        if ul:
+            ul.decompose()
+        if tech and tech.get_text().endswith(' · 6 weeks'):  # già detto nel titolo
+            tech.string = tech.get_text()[:-len(' · 6 weeks')]
     if not soup.find(id='apply'):
         frag = BeautifulSoup(APPLY, 'html.parser')
         soup.body.append(frag)
@@ -101,13 +118,12 @@ def corporate(soup):
 
 
 def retreats(soup):
+    for sp in soup.select('.tbw-dw-more span'):  # niente freccia
+        sp.decompose()
     col = soup.select_one('.elementor-element-5c95f5f')
     if col and not col.select_one('.tbw-dw-more'):
         a = soup.new_tag('a', attrs={'class': 'tbw-dw-more', 'href': RITIRI_DW, 'target': '_blank', 'rel': 'noopener'})
         a.string = 'Explore more'
-        sp = soup.new_tag('span', attrs={'aria-hidden': 'true'})
-        sp.string = ' →'
-        a.append(sp)
         wrap = soup.new_tag('div', attrs={'class': 'tbw-dw-cta'})
         wrap.append(a)
         col.append(wrap)

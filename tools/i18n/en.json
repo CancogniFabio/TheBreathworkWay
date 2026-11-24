@@ -1783,8 +1783,7 @@
 "breathwork-ceremony"
 ],
 "Conscious Connected Breathwork": [
-"breathwork-ceremony",
-"breathwork-lisbon"
+"breathwork-ceremony"
 ],
 "A 50-60 minute guided breathwork journey using continuous rhythmic breathing, music and sound. This practice has a way of bypassing the thinking mind entirely and taking you somewhere the mind alone cannot go.": [
 "breathwork-ceremony"
@@ -2195,7 +2194,7 @@
 "Calm my system": [
 "breathwork-lisbon"
 ],
-"Nervous system regulation session": [
+"Nervous system regulation session · 60 min": [
 "breathwork-lisbon"
 ],
 "For you if": [
@@ -2210,22 +2209,13 @@
 "We look at how your body handles stress, then we use slow, simple breathing to bring you out of alert mode. You leave feeling the difference, with one or two practices you can do every day in five minutes.": [
 "breathwork-lisbon"
 ],
-"<span>Where</span><span>Lisbon or online</span>": [
-"breathwork-lisbon"
-],
-"<span>Length</span><span>60 min</span>": [
-"breathwork-lisbon"
-],
-"<span>You leave with</span><span>A daily practice</span>": [
-"breathwork-lisbon"
-],
-"Book this session": [
+"<a>Book this session</a>": [
 "breathwork-lisbon"
 ],
 "Fix how I breathe": [
 "breathwork-lisbon"
 ],
-"Breathing mechanics session": [
+"Breathing mechanics session · 60 to 90 min": [
 "breathwork-lisbon"
 ],
 "<span>You breathe through your mouth</span><span>You often feel short of breath</span><span>You sigh a lot</span><span>Tight chest, jaw or shoulders</span><span>You want better breathing for sport</span>": [
@@ -2234,28 +2224,16 @@
 "I test how you actually breathe: nose or mouth, rhythm, how your ribs and diaphragm move, how well you tolerate CO2. Then we retrain the pattern with simple drills. Very practical, a bit like physio for your breathing.": [
 "breathwork-lisbon"
 ],
-"<span>Length</span><span>60 to 90 min</span>": [
-"breathwork-lisbon"
-],
-"<span>You leave with</span><span>Your breathing drills</span>": [
-"breathwork-lisbon"
-],
 "Go deeper": [
+"breathwork-lisbon"
+],
+"Conscious Connected Breathwork · 2 to 3 hours": [
 "breathwork-lisbon"
 ],
 "<span>Something feels stuck</span><span>You can't think your way out of it</span><span>You push emotions down</span><span>You've already done some inner work</span>": [
 "breathwork-lisbon"
 ],
 "You lie down and breathe in a continuous rhythm for about an hour, with music, while I guide you. Emotions, memories or strong body sensations can come up. We prepare together before, and take time after to make sense of what came up.": [
-"breathwork-lisbon"
-],
-"<span>Length</span><span>2 to 3 hours</span>": [
-"breathwork-lisbon"
-],
-"<span>Where</span><span>In person, Lisbon</span>": [
-"breathwork-lisbon"
-],
-"<span>Before booking</span><span>Short health check</span>": [
 "breathwork-lisbon"
 ],
 "Make it last": [
@@ -2273,13 +2251,7 @@
 "Had a single session first? Its cost comes off the programme if you join within three months.": [
 "breathwork-lisbon"
 ],
-"<span>Length</span><span>6 weeks</span>": [
-"breathwork-lisbon"
-],
-"<span>Format</span><span>A mix of online and in person</span>": [
-"breathwork-lisbon"
-],
-"Apply for the programme": [
+"<a>Apply for the programme</a>": [
 "breathwork-lisbon"
 ],
 "Three steps.<br><span>In this order.</span>": [
@@ -2406,6 +2378,9 @@
 "breathwork-lisbon"
 ],
 "Begin where you are": [
+"breathwork-lisbon"
+],
+"Book this session": [
 "breathwork-lisbon"
 ],
 "Tell me a bit about you": [
@@ -5765,7 +5740,7 @@
 "Through silence, desert walks and practices that engage body, mind, and soul, clarity gradually emerges, making space for what truly needs to be heard. <b>You return with a wider, more authentic, and aligned perception of life</b>, carrying presence and awareness into everyday moments.": [
 "retreats-events"
 ],
-"<a>Explore more<span> →</span></a>": [
+"<a>Explore more</a>": [
 "retreats-events"
 ],
 "Your own private retreat": [

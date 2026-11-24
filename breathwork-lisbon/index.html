@@ -1840,10 +1840,21 @@ button[type="submit"],
 .elementor-heading-title, .elementor-heading-title * { overflow-wrap: normal !important; word-break: normal !important; hyphens: manual !important; }
 
 /* ---------- Framework della Home: 03 Release bianco come gli altri ---------- */
-html body .tbw-fw-col:nth-child(3) > h3 { color: #fff !important; }
-html body .tbw-fw-col:nth-child(3) > .num { color: var(--lb) !important; }
-html body .tbw-fw-col:nth-child(3) > .q { color: var(--lb) !important; }
-html body .tbw-fw-col:nth-child(3) > .tx { color: var(--soft) !important; }
+#tbw-fw .tbw-fw-cols .tbw-fw-col:nth-child(3) > h3 { color: #fff !important; }
+#tbw-fw .tbw-fw-cols .tbw-fw-col:nth-child(3) > .num { color: var(--lb) !important; }
+#tbw-fw .tbw-fw-cols .tbw-fw-col:nth-child(3) > .q { color: var(--lb) !important; }
+#tbw-fw .tbw-fw-cols .tbw-fw-col:nth-child(3) > .tx { color: var(--soft) !important; }
+
+/* Retreats & Events: "starts within yourself." a capo */
+.elementor-2770 .elementor-element-3a24def span { display: block; }
+
+/* ---------- Offerings: niente più lista Where / Length / You leave with ---------- */
+.bwo .bwo-side .bwo-in { display: flex; flex-direction: column; justify-content: flex-end; height: 100%; }
+
+/* ---------- hero: foto intera, mai ripetuta ---------- */
+@media (max-width: 1024px) {
+  .elementor-element-bb994fa:not(.elementor-motion-effects-element-type-background) { background-size: cover !important; background-repeat: no-repeat !important; background-position: center center !important; }
+}
 
 /* ---------- sezioni a step che si fermano allo scroll (tools/ux.js) ---------- */
 .tbw-pin-wrap { position: relative; }
@@ -1870,42 +1881,25 @@ html body .tbw-fw-col:nth-child(3) > .tx { color: var(--soft) !important; }
 .elementor-2471 .elementor-element-9ec13cd .e-con { background-image: none !important; background-color: transparent !important; }
 
 /* ---------- Retreats & Events: foto "Save the date" ferma dietro, la pagina scorre sopra ---------- */
-.elementor-2770 .elementor-element-194852a { background-image: none !important; clip-path: inset(0); min-height: 70vh; }
+.elementor-2770 .elementor-element-194852a { background-image: none !important; clip-path: inset(0); }
 .elementor-2770 .elementor-element-194852a::after {
   content: ""; position: fixed; inset: 0; z-index: -1; pointer-events: none;
   background: url("../assets/media/2026/09/IMG_1198.jpg.webp") center 40% / cover no-repeat;
 }
 
-/* ---------- Retreats & Events: Desert Way immersivo (foto a tutto schermo, testo al centro) ---------- */
-.elementor-2770 .elementor-element-c9a1ffd {
-  position: relative; clip-path: inset(0); background: none !important;
-  padding-top: 140px !important; padding-bottom: 140px !important; min-height: 100vh;
+/* ---------- Retreats & Events: Desert Way, due colonne con foto del deserto (dromedari) ---------- */
+.elementor-2770 .elementor-element-0d0757c {
+  background: url("../assets/media/ritiri/desert-dromedari.jpg") center / cover no-repeat !important;
+  min-height: 420px; align-self: stretch !important; padding: 0 !important;
 }
-.elementor-2770 .elementor-element-c9a1ffd::after {
-  content: ""; position: fixed; inset: 0; z-index: -1; pointer-events: none;
-  background: linear-gradient(180deg, rgba(28,39,36,.62), rgba(28,39,36,.5) 50%, rgba(28,39,36,.72)),
-              url("../assets/media/ritiri/desert-way.jpg") center / cover no-repeat;
-}
-.elementor-2770 .elementor-element-c9a1ffd > .e-con-inner { justify-content: center !important; align-items: center !important; }
-.elementor-2770 .elementor-element-0d0757c { display: none !important; }
-.elementor-2770 .elementor-element-5c95f5f {
-  width: 100% !important; max-width: 720px !important; --width: 100% !important; margin: 0 auto !important;
-  text-align: center; background: none !important; border: 0 !important; box-shadow: none !important; padding: 0 !important;
-}
-.elementor-2770 .elementor-element-5c95f5f :is(.elementor-heading-title, p, span, li, a:not(.tbw-dw-more)) { color: #F2EEE8 !important; text-shadow: 0 1px 2px rgba(0,0,0,.25); }
-.elementor-2770 .elementor-element-ee83982 .elementor-heading-title { color: #E6D5C3 !important; letter-spacing: 2px !important; }
-.elementor-2770 .elementor-element-110e072 .elementor-heading-title { font-size: clamp(48px, 8vw, 92px) !important; line-height: 1 !important; }
-.elementor-2770 .elementor-element-5c95f5f .elementor-icon-list-items, .elementor-2770 .elementor-element-5c95f5f .elementor-icon-list-item { justify-content: center !important; text-align: center; }
-.elementor-2770 .elementor-element-5c95f5f .elementor-widget-icon-list { width: 100%; }
-.elementor-2770 .elementor-element-5c95f5f .elementor-icon-list-icon svg, .elementor-2770 .elementor-element-5c95f5f .elementor-icon-list-icon i { fill: #E6D5C3 !important; color: #E6D5C3 !important; }
-.elementor-2770 .elementor-element-5c95f5f .elementor-widget-text-editor { font-size: 18px; line-height: 1.75; }
-.tbw-dw-cta { margin-top: 36px; }
+.elementor-2770 .elementor-element-0d0757c > .elementor-widget-image { visibility: hidden; }
+.tbw-dw-cta { margin-top: 28px; }
 .tbw-dw-more {
-  display: inline-flex; align-items: center; gap: 6px; padding: 15px 34px;
+  display: inline-flex; align-items: center; padding: 14px 32px;
   font-family: Archivo, sans-serif; font-size: 18px; letter-spacing: .5px; text-decoration: none !important;
-  color: #1C2724 !important; background: #F2EEE8; border: 1px solid #F2EEE8; transition: background .3s, color .3s;
+  color: #86601F !important; background: transparent; border: 1px solid #B8815E; transition: background .3s, color .3s;
 }
-.tbw-dw-more:hover { background: transparent; color: #F2EEE8 !important; }
+.tbw-dw-more:hover { background: #B8815E; color: #fff !important; }
 
 /* ---------- Contatti: label con lo stile delle intestazioni del sito ---------- */
 .elementor-2551 .elementor-element-83a3542, .elementor-2551 .elementor-element-d637413, .elementor-2551 .elementor-element-ddee5a5 { margin-bottom: 4px; }
@@ -2082,6 +2076,11 @@ html body .tbw-modal button.tbw-modal-send[type="submit"], html body .tbw-modal 
   /* Corporate FAQ: titolo sopra, domande sotto, una colonna */
   .elementor-3524 .elementor-element-7ebd347 > .e-con-inner { gap: 24px !important; }
 
+  /* Retreats: Desert Way su due colonne, foto e testo affiancati */
+  .elementor-2770 .elementor-element-c9a1ffd > .e-con-inner { flex-direction: row !important; flex-wrap: nowrap !important; gap: 36px !important; align-items: stretch !important; }
+  .elementor-2770 .elementor-element-0d0757c { width: 44% !important; --width: 44% !important; max-width: 44% !important; margin: 0 !important; }
+  .elementor-2770 .elementor-element-5c95f5f { width: 56% !important; --width: 56% !important; max-width: 56% !important; margin: 0 !important; padding: 0 !important; }
+
   /* Framework: i quattro approcci in griglia 2x2 uguale */
   .elementor-2417 .elementor-element-f19439c, .elementor-2417 .elementor-element-fc2bc89 { padding-top: 12px !important; padding-bottom: 12px !important; }
   .elementor-2417 .elementor-element-f19439c > .e-con-inner, .elementor-2417 .elementor-element-fc2bc89 > .e-con-inner { flex-wrap: nowrap !important; gap: 24px !important; align-items: stretch !important; }
@@ -2107,6 +2106,8 @@ html body .tbw-modal button.tbw-modal-send[type="submit"], html body .tbw-modal 
   /* Corporate: righe con etichetta sopra e testo sotto */
   .elementor-3524 :is(.elementor-element-0e89be6, .elementor-element-3ccef28, .elementor-element-e3436b3) { flex-direction: column !important; align-items: flex-start !important; gap: 4px !important; }
   .elementor-3524 :is(.elementor-element-0e89be6, .elementor-element-3ccef28, .elementor-element-e3436b3) > * { width: 100% !important; max-width: 100% !important; }
+  /* Retreats: Desert Way, foto sopra e testo sotto */
+  .elementor-2770 .elementor-element-0d0757c { width: 100% !important; --width: 100% !important; min-height: 0; aspect-ratio: 3 / 2; }
   /* Corporate: numeri al centro */
   #cbs-stats .cbs-stat { text-align: center; }
   /* Corporate FAQ: una colonna */
@@ -2142,10 +2143,10 @@ el.addEventListener('click',toggle);el.addEventListener('keydown',function(e){if
 <button aria-selected="true" class="bwo-tab is-on" data-i="0" role="tab"><span class="bwo-num">01</span><span class="bwo-t ty-t2">Calm my system</span><span class="bwo-s ty-tx">Nervous system regulation</span></button>
 <button aria-selected="false" class="bwo-tab" data-i="1" role="tab"><span class="bwo-num">02</span><span class="bwo-t ty-t2">Fix how I breathe</span><span class="bwo-s ty-tx">Breathing mechanics</span></button>
 <button aria-selected="false" class="bwo-tab" data-i="2" role="tab"><span class="bwo-num">03</span><span class="bwo-t ty-t2">Go deeper</span><span class="bwo-s ty-tx">Conscious Connected Breathwork</span></button>
-<button aria-selected="false" class="bwo-tab" data-i="3" role="tab"><span class="bwo-badge">Recommended</span><span class="bwo-num">04</span><span class="bwo-t ty-t2">Make it last</span><span class="bwo-s ty-tx">6-week programme</span></button></div><div class="bwo-panel is-on" role="tabpanel"><div class="bwo-body"><h3 class="ty-t1">Calm my system</h3><span class="bwo-tech ty-tx">Nervous system regulation session</span><p class="bwo-lbl ty-t3">For you if</p><div class="bwo-chips ty-tx"><span>You sleep badly</span><span>You feel wired in the evening</span><span>Small things set you off</span><span>You live in your head</span><span>You can't really rest</span></div><p class="bwo-lbl ty-t3">What happens</p><p class="ty-tx">We look at how your body handles stress, then we use slow, simple breathing to bring you out of alert mode. You leave feeling the difference, with one or two practices you can do every day in five minutes.</p></div><div class="bwo-side"><div class="bwo-in"><ul class="bwo-facts ty-tx"><li><span>Where</span><span>Lisbon or online</span></li><li><span>Length</span><span>60 min</span></li><li><span>You leave with</span><span>A daily practice</span></li></ul>
-<a class="bwo-btn ty-btn" data-pick="Calm my system" href="#apply">Book this session</a></div></div></div><div class="bwo-panel" role="tabpanel"><div class="bwo-body"><h3 class="ty-t1">Fix how I breathe</h3><span class="bwo-tech ty-tx">Breathing mechanics session</span><p class="bwo-lbl ty-t3">For you if</p><div class="bwo-chips ty-tx"><span>You breathe through your mouth</span><span>You often feel short of breath</span><span>You sigh a lot</span><span>Tight chest, jaw or shoulders</span><span>You want better breathing for sport</span></div><p class="bwo-lbl ty-t3">What happens</p><p class="ty-tx">I test how you actually breathe: nose or mouth, rhythm, how your ribs and diaphragm move, how well you tolerate CO2. Then we retrain the pattern with simple drills. Very practical, a bit like physio for your breathing.</p></div><div class="bwo-side"><div class="bwo-in"><ul class="bwo-facts ty-tx"><li><span>Where</span><span>Lisbon or online</span></li><li><span>Length</span><span>60 to 90 min</span></li><li><span>You leave with</span><span>Your breathing drills</span></li></ul>
-<a class="bwo-btn ty-btn" data-pick="Fix how I breathe" href="#apply">Book this session</a></div></div></div><div class="bwo-panel" role="tabpanel"><div class="bwo-body"><h3 class="ty-t1">Go deeper</h3><span class="bwo-tech ty-tx">Conscious Connected Breathwork</span><p class="bwo-lbl ty-t3">For you if</p><div class="bwo-chips ty-tx"><span>Something feels stuck</span><span>You can't think your way out of it</span><span>You push emotions down</span><span>You've already done some inner work</span></div><p class="bwo-lbl ty-t3">What happens</p><p class="ty-tx">You lie down and breathe in a continuous rhythm for about an hour, with music, while I guide you. Emotions, memories or strong body sensations can come up. We prepare together before, and take time after to make sense of what came up.</p></div><div class="bwo-side"><div class="bwo-in"><ul class="bwo-facts ty-tx"><li><span>Length</span><span>2 to 3 hours</span></li><li><span>Where</span><span>In person, Lisbon</span></li><li><span>Before booking</span><span>Short health check</span></li></ul>
-<a class="bwo-btn ty-btn" data-pick="Go deeper" href="#apply">Book this session</a></div></div></div><div class="bwo-panel" role="tabpanel"><div class="bwo-body"><h3 class="ty-t1">Make it last</h3><span class="bwo-tech ty-tx">6-week one-to-one programme</span><p class="bwo-lbl ty-t3">For you if</p><div class="bwo-chips ty-tx"><span>You want change that stays</span><span>You've tried apps and they didn't stick</span><span>You want guidance week by week</span></div><p class="bwo-lbl ty-t3">What happens</p><p class="ty-tx">Six private sessions over six weeks. The first is in person in Lisbon, the rest online. Between sessions you have a short daily practice, and we follow three steps in order: two weeks to regulate, two to reveal, two to release.</p><p class="bwo-note ty-tx">Had a single session first? Its cost comes off the programme if you join within three months.</p></div><div class="bwo-side"><div class="bwo-in"><ul class="bwo-facts ty-tx"><li><span>Length</span><span>6 weeks</span></li><li><span>Format</span><span>A mix of online and in person</span></li></ul>
+<button aria-selected="false" class="bwo-tab" data-i="3" role="tab"><span class="bwo-badge">Recommended</span><span class="bwo-num">04</span><span class="bwo-t ty-t2">Make it last</span><span class="bwo-s ty-tx">6-week programme</span></button></div><div class="bwo-panel is-on" role="tabpanel"><div class="bwo-body"><h3 class="ty-t1">Calm my system</h3><span class="bwo-tech ty-tx" data-tbw-len="1">Nervous system regulation session · 60 min</span><p class="bwo-lbl ty-t3">For you if</p><div class="bwo-chips ty-tx"><span>You sleep badly</span><span>You feel wired in the evening</span><span>Small things set you off</span><span>You live in your head</span><span>You can't really rest</span></div><p class="bwo-lbl ty-t3">What happens</p><p class="ty-tx">We look at how your body handles stress, then we use slow, simple breathing to bring you out of alert mode. You leave feeling the difference, with one or two practices you can do every day in five minutes.</p></div><div class="bwo-side"><div class="bwo-in">
+<a class="bwo-btn ty-btn" data-pick="Calm my system" href="#apply">Book this session</a></div></div></div><div class="bwo-panel" role="tabpanel"><div class="bwo-body"><h3 class="ty-t1">Fix how I breathe</h3><span class="bwo-tech ty-tx" data-tbw-len="1">Breathing mechanics session · 60 to 90 min</span><p class="bwo-lbl ty-t3">For you if</p><div class="bwo-chips ty-tx"><span>You breathe through your mouth</span><span>You often feel short of breath</span><span>You sigh a lot</span><span>Tight chest, jaw or shoulders</span><span>You want better breathing for sport</span></div><p class="bwo-lbl ty-t3">What happens</p><p class="ty-tx">I test how you actually breathe: nose or mouth, rhythm, how your ribs and diaphragm move, how well you tolerate CO2. Then we retrain the pattern with simple drills. Very practical, a bit like physio for your breathing.</p></div><div class="bwo-side"><div class="bwo-in">
+<a class="bwo-btn ty-btn" data-pick="Fix how I breathe" href="#apply">Book this session</a></div></div></div><div class="bwo-panel" role="tabpanel"><div class="bwo-body"><h3 class="ty-t1">Go deeper</h3><span class="bwo-tech ty-tx" data-tbw-len="1">Conscious Connected Breathwork · 2 to 3 hours</span><p class="bwo-lbl ty-t3">For you if</p><div class="bwo-chips ty-tx"><span>Something feels stuck</span><span>You can't think your way out of it</span><span>You push emotions down</span><span>You've already done some inner work</span></div><p class="bwo-lbl ty-t3">What happens</p><p class="ty-tx">You lie down and breathe in a continuous rhythm for about an hour, with music, while I guide you. Emotions, memories or strong body sensations can come up. We prepare together before, and take time after to make sense of what came up.</p></div><div class="bwo-side"><div class="bwo-in">
+<a class="bwo-btn ty-btn" data-pick="Go deeper" href="#apply">Book this session</a></div></div></div><div class="bwo-panel" role="tabpanel"><div class="bwo-body"><h3 class="ty-t1">Make it last</h3><span class="bwo-tech ty-tx" data-tbw-len="1">6-week one-to-one programme</span><p class="bwo-lbl ty-t3">For you if</p><div class="bwo-chips ty-tx"><span>You want change that stays</span><span>You've tried apps and they didn't stick</span><span>You want guidance week by week</span></div><p class="bwo-lbl ty-t3">What happens</p><p class="ty-tx">Six private sessions over six weeks. The first is in person in Lisbon, the rest online. Between sessions you have a short daily practice, and we follow three steps in order: two weeks to regulate, two to reveal, two to release.</p><p class="bwo-note ty-tx">Had a single session first? Its cost comes off the programme if you join within three months.</p></div><div class="bwo-side"><div class="bwo-in">
 <a class="bwo-btn ty-btn" data-pick="6-week program" href="#apply">Apply for the programme</a></div></div></div></div> <script>(function(){var root=document.getElementById('bwo-options');if(!root)return;var tabs=root.querySelectorAll('.bwo-tab'),panels=root.querySelectorAll('.bwo-panel');tabs.forEach(function(t){t.addEventListener('click',function(){tabs.forEach(function(x){x.classList.remove('is-on');x.setAttribute('aria-selected','false')});panels.forEach(function(p){p.classList.remove('is-on')});t.classList.add('is-on');t.setAttribute('aria-selected','true');panels[+t.getAttribute('data-i')].classList.add('is-on')})});root.querySelectorAll('[data-pick]').forEach(function(b){b.addEventListener('click',function(){var v=b.getAttribute('data-pick'),f=document.querySelector('#apply select[name="option"]');if(f){f.value=v;f.dispatchEvent(new Event('change',{bubbles:!0}));return}
 var r=document.querySelector('#apply input[name="option"][value="'+v+'"]');if(r){r.checked=!0;r.dispatchEvent(new Event('change',{bubbles:!0}))}})})})()</script> </div></div></div></div><div class="elementor-element elementor-element-5084df4 e-flex e-con-boxed e-con e-parent e-lazyloaded" data-e-type="container" data-element_type="container" data-id="5084df4" data-settings='{"background_background":"classic"}'><div class="e-con-inner"><div class="elementor-element elementor-element-60d43c9 elementor-widget elementor-widget-html" data-e-type="widget" data-element_type="widget" data-id="60d43c9" data-widget_type="html.default"><div class="elementor-widget-container"><section aria-label="The Breathwork Way method" class="bwm" data-tbw-pin=".bwm-step" data-tbw-pin-mode="hover" id="bwm-method"><div class="bwm-in"><div class="bwm-head"><h2 class="t1 rv">Three steps.<br/><span class="acc">In this order.</span></h2><p class="tx rv d1">The Breathwork Way is a structured approach that brings together nervous system science, breathing mechanics and somatic work.</p></div><div class="bwm-grid"><div class="bwm-onion rv" style="--b: 1.0134;"><i></i><canvas aria-label="An onion cut open showing three layers: Regulate outside, Reveal in the middle, Release at the core" class="ready" data-tbw-preview="../assets/media/onion-offerings.webp" height="832" role="img" width="704"></canvas></div><div class="bwm-steps"><div class="bwm-step rv d1" data-i="1"><span class="t3">01</span><div><h3 class="t2">Regulate</h3><p class="tx">First, safety. We get your body out of survival mode with precise, gentle breathing and a daily practice you can keep.</p></div></div><div class="bwm-step rv d2" data-i="2"><span class="t3">02</span><div><h3 class="t2">Reveal</h3><p class="tx">Then we look at your patterns: where the breath stops, where tension sits, how your system reacts under pressure.</p></div></div><div class="bwm-step rv d3" data-i="3"><span class="t3">03</span><div><h3 class="t2">Release</h3><p class="tx">When your system is ready, deeper breathwork lets you move what thinking alone can't reach.</p></div></div></div></div><div class="bwm-foot rv"><p class="t2">I never start with intense breathwork.<br/><span class="acc">Regulation comes first.</span></p>
 <a class="bwm-btn" href="../framework/">Explore the framework <span aria-hidden="true">→</span></a></div></div></section> <script>(function(){var root=document.getElementById('bwm-method');if(!root)return;var still=window.matchMedia('(prefers-reduced-motion: reduce)').matches;var cv=root.querySelector('canvas'),ctx=cv.getContext('2d'),cs=getComputedStyle(root);var W=440,H=520,SS=1.6,PW=Math.round(W*SS),PH=Math.round(H*SS);cv.width=PW;cv.height=PH;var img=ctx.createImageData(PW,PH),D=img.data,N=PW*PH;var KIND=new Uint8Array(N),SV=new Float32Array(N),SH=new Float32Array(N),EX=new Float32Array(N);var deg=Math.PI/180,P=15*deg,cp=Math.cos(P),sp=Math.sin(P);var A1=-42*deg,A2=48*deg;var SC=PH/3.05,CX=PW/2,CY=PH/2+0.2*SC;function norm(v){var l=Math.hypot(v[0],v[1],v[2]);return[v[0]/l,v[1]/l,v[2]/l]}
@@ -2350,6 +2351,8 @@ lazyloadBackgroundObserver.unobserve(entry.target)}})},{rootMargin:'200px 0px 20
       var scrolled = wrap._stick - r.top;
       var p = Math.max(0, Math.min(1, scrolled / wrap._len));
       var i = r.top > wrap._stick + window.innerHeight * 0.25 ? 0 : Math.min(n - 1, Math.floor(p * n));
+      // se il browser non tiene ferma la sezione, quando sta uscendo dallo schermo si accendono tutti gli step
+      if (sec.getBoundingClientRect().bottom < window.innerHeight * 0.75) i = n - 1;
       set(i, p);
       sec.classList.toggle('tbw-pin-live', scrolled > 0 && p < 1);
       if (mode === 'hover' && (p >= 1 || r.bottom < 0)) steps[n - 1].dispatchEvent(new Event('mouseleave'));

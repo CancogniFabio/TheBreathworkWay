@@ -56,7 +56,7 @@ Sezioni a step (1, 2, 3): lo scroll si deve fermare sulla sezione, ogni scroll p
 - [x] Foto sotto "Save the date" (Fabio a bordo piscina): effetto sfondo fisso che scorre (parallax) come la foto Himalaya di Ritiri Itineranti / Inner Travels
 - [x] "Desert Way": ristrutturare, ritiro immersivo, niente due colonne
 - [x] Non più Inner Travels ma Ritiri Itineranti: bottone "Esplora di più" che porta al sito italiano di Ritiri Itineranti
-- [ ] Locandina da Ritiri Itineranti: per ora foto del sito Ritiri Itineranti (assets/media/ritiri/desert-way.jpg), Fabio manda la locandina
+- [x] Desert Way: due colonne, foto del deserto con dromedari (assets/media/ritiri/desert-dromedari.jpg) e testo a fianco, bottone senza freccia (25 nov)
 
 ## Retreats & Events (seguito)
 - [x] "Chi sono" (About, dopo i ritiri): due colonne troppo strette
@@ -74,3 +74,9 @@ Sezioni a step (1, 2, 3): lo scroll si deve fermare sulla sezione, ogni scroll p
 - Book this session invia allo stesso Formspree delle richieste ritiri (xkjgawre), con oggetto "Book this session: ...". Se serve, creare un modulo Formspree a parte
 - Bug sistemato: footer.py copiava nelle altre pagine lo sfondo dell'hero della Home (per questo Framework, Offerings e Retreats non avevano la foto)
 - Locandina Desert Way
+
+## Secondo giro (25 nov 2026)
+- [x] Home: 03 Release bianco (una regola vecchia più forte lo teneva grigio); step accesi anche se il browser non tiene ferma la sezione
+- [x] Hero di Offerings, Retreats e Framework: foto intera, mai ripetuta, centrata (iPad e telefono)
+- [x] Offerings: tolte le liste Where / Length / You leave with, la durata è nel sottotitolo della scheda
+- [x] Retreats: "starts within yourself." a capo; foto della piscina di nuovo bassa come prima

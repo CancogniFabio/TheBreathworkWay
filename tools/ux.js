@@ -68,6 +68,8 @@
       var scrolled = wrap._stick - r.top;
       var p = Math.max(0, Math.min(1, scrolled / wrap._len));
       var i = r.top > wrap._stick + window.innerHeight * 0.25 ? 0 : Math.min(n - 1, Math.floor(p * n));
+      // se il browser non tiene ferma la sezione, quando sta uscendo dallo schermo si accendono tutti gli step
+      if (sec.getBoundingClientRect().bottom < window.innerHeight * 0.75) i = n - 1;
       set(i, p);
       sec.classList.toggle('tbw-pin-live', scrolled > 0 && p < 1);
       if (mode === 'hover' && (p >= 1 || r.bottom < 0)) steps[n - 1].dispatchEvent(new Event('mouseleave'));

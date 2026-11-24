@@ -1397,10 +1397,21 @@ button[type="submit"],
 .elementor-heading-title, .elementor-heading-title * { overflow-wrap: normal !important; word-break: normal !important; hyphens: manual !important; }
 
 /* ---------- Framework della Home: 03 Release bianco come gli altri ---------- */
-html body .tbw-fw-col:nth-child(3) > h3 { color: #fff !important; }
-html body .tbw-fw-col:nth-child(3) > .num { color: var(--lb) !important; }
-html body .tbw-fw-col:nth-child(3) > .q { color: var(--lb) !important; }
-html body .tbw-fw-col:nth-child(3) > .tx { color: var(--soft) !important; }
+#tbw-fw .tbw-fw-cols .tbw-fw-col:nth-child(3) > h3 { color: #fff !important; }
+#tbw-fw .tbw-fw-cols .tbw-fw-col:nth-child(3) > .num { color: var(--lb) !important; }
+#tbw-fw .tbw-fw-cols .tbw-fw-col:nth-child(3) > .q { color: var(--lb) !important; }
+#tbw-fw .tbw-fw-cols .tbw-fw-col:nth-child(3) > .tx { color: var(--soft) !important; }
+
+/* Retreats & Events: "starts within yourself." a capo */
+.elementor-2770 .elementor-element-3a24def span { display: block; }
+
+/* ---------- Offerings: niente più lista Where / Length / You leave with ---------- */
+.bwo .bwo-side .bwo-in { display: flex; flex-direction: column; justify-content: flex-end; height: 100%; }
+
+/* ---------- hero: foto intera, mai ripetuta ---------- */
+@media (max-width: 1024px) {
+  .elementor-element-bb994fa:not(.elementor-motion-effects-element-type-background) { background-size: cover !important; background-repeat: no-repeat !important; background-position: center center !important; }
+}
 
 /* ---------- sezioni a step che si fermano allo scroll (tools/ux.js) ---------- */
 .tbw-pin-wrap { position: relative; }
@@ -1427,42 +1438,25 @@ html body .tbw-fw-col:nth-child(3) > .tx { color: var(--soft) !important; }
 .elementor-2471 .elementor-element-9ec13cd .e-con { background-image: none !important; background-color: transparent !important; }
 
 /* ---------- Retreats & Events: foto "Save the date" ferma dietro, la pagina scorre sopra ---------- */
-.elementor-2770 .elementor-element-194852a { background-image: none !important; clip-path: inset(0); min-height: 70vh; }
+.elementor-2770 .elementor-element-194852a { background-image: none !important; clip-path: inset(0); }
 .elementor-2770 .elementor-element-194852a::after {
   content: ""; position: fixed; inset: 0; z-index: -1; pointer-events: none;
   background: url("../../assets/media/2026/09/IMG_1198.jpg.webp") center 40% / cover no-repeat;
 }
 
-/* ---------- Retreats & Events: Desert Way immersivo (foto a tutto schermo, testo al centro) ---------- */
-.elementor-2770 .elementor-element-c9a1ffd {
-  position: relative; clip-path: inset(0); background: none !important;
-  padding-top: 140px !important; padding-bottom: 140px !important; min-height: 100vh;
+/* ---------- Retreats & Events: Desert Way, due colonne con foto del deserto (dromedari) ---------- */
+.elementor-2770 .elementor-element-0d0757c {
+  background: url("../../assets/media/ritiri/desert-dromedari.jpg") center / cover no-repeat !important;
+  min-height: 420px; align-self: stretch !important; padding: 0 !important;
 }
-.elementor-2770 .elementor-element-c9a1ffd::after {
-  content: ""; position: fixed; inset: 0; z-index: -1; pointer-events: none;
-  background: linear-gradient(180deg, rgba(28,39,36,.62), rgba(28,39,36,.5) 50%, rgba(28,39,36,.72)),
-              url("../../assets/media/ritiri/desert-way.jpg") center / cover no-repeat;
-}
-.elementor-2770 .elementor-element-c9a1ffd > .e-con-inner { justify-content: center !important; align-items: center !important; }
-.elementor-2770 .elementor-element-0d0757c { display: none !important; }
-.elementor-2770 .elementor-element-5c95f5f {
-  width: 100% !important; max-width: 720px !important; --width: 100% !important; margin: 0 auto !important;
-  text-align: center; background: none !important; border: 0 !important; box-shadow: none !important; padding: 0 !important;
-}
-.elementor-2770 .elementor-element-5c95f5f :is(.elementor-heading-title, p, span, li, a:not(.tbw-dw-more)) { color: #F2EEE8 !important; text-shadow: 0 1px 2px rgba(0,0,0,.25); }
-.elementor-2770 .elementor-element-ee83982 .elementor-heading-title { color: #E6D5C3 !important; letter-spacing: 2px !important; }
-.elementor-2770 .elementor-element-110e072 .elementor-heading-title { font-size: clamp(48px, 8vw, 92px) !important; line-height: 1 !important; }
-.elementor-2770 .elementor-element-5c95f5f .elementor-icon-list-items, .elementor-2770 .elementor-element-5c95f5f .elementor-icon-list-item { justify-content: center !important; text-align: center; }
-.elementor-2770 .elementor-element-5c95f5f .elementor-widget-icon-list { width: 100%; }
-.elementor-2770 .elementor-element-5c95f5f .elementor-icon-list-icon svg, .elementor-2770 .elementor-element-5c95f5f .elementor-icon-list-icon i { fill: #E6D5C3 !important; color: #E6D5C3 !important; }
-.elementor-2770 .elementor-element-5c95f5f .elementor-widget-text-editor { font-size: 18px; line-height: 1.75; }
-.tbw-dw-cta { margin-top: 36px; }
+.elementor-2770 .elementor-element-0d0757c > .elementor-widget-image { visibility: hidden; }
+.tbw-dw-cta { margin-top: 28px; }
 .tbw-dw-more {
-  display: inline-flex; align-items: center; gap: 6px; padding: 15px 34px;
+  display: inline-flex; align-items: center; padding: 14px 32px;
   font-family: Archivo, sans-serif; font-size: 18px; letter-spacing: .5px; text-decoration: none !important;
-  color: #1C2724 !important; background: #F2EEE8; border: 1px solid #F2EEE8; transition: background .3s, color .3s;
+  color: #86601F !important; background: transparent; border: 1px solid #B8815E; transition: background .3s, color .3s;
 }
-.tbw-dw-more:hover { background: transparent; color: #F2EEE8 !important; }
+.tbw-dw-more:hover { background: #B8815E; color: #fff !important; }
 
 /* ---------- Contatti: label con lo stile delle intestazioni del sito ---------- */
 .elementor-2551 .elementor-element-83a3542, .elementor-2551 .elementor-element-d637413, .elementor-2551 .elementor-element-ddee5a5 { margin-bottom: 4px; }
@@ -1639,6 +1633,11 @@ html body .tbw-modal button.tbw-modal-send[type="submit"], html body .tbw-modal 
   /* Corporate FAQ: titolo sopra, domande sotto, una colonna */
   .elementor-3524 .elementor-element-7ebd347 > .e-con-inner { gap: 24px !important; }
 
+  /* Retreats: Desert Way su due colonne, foto e testo affiancati */
+  .elementor-2770 .elementor-element-c9a1ffd > .e-con-inner { flex-direction: row !important; flex-wrap: nowrap !important; gap: 36px !important; align-items: stretch !important; }
+  .elementor-2770 .elementor-element-0d0757c { width: 44% !important; --width: 44% !important; max-width: 44% !important; margin: 0 !important; }
+  .elementor-2770 .elementor-element-5c95f5f { width: 56% !important; --width: 56% !important; max-width: 56% !important; margin: 0 !important; padding: 0 !important; }
+
   /* Framework: i quattro approcci in griglia 2x2 uguale */
   .elementor-2417 .elementor-element-f19439c, .elementor-2417 .elementor-element-fc2bc89 { padding-top: 12px !important; padding-bottom: 12px !important; }
   .elementor-2417 .elementor-element-f19439c > .e-con-inner, .elementor-2417 .elementor-element-fc2bc89 > .e-con-inner { flex-wrap: nowrap !important; gap: 24px !important; align-items: stretch !important; }
@@ -1664,6 +1663,8 @@ html body .tbw-modal button.tbw-modal-send[type="submit"], html body .tbw-modal 
   /* Corporate: righe con etichetta sopra e testo sotto */
   .elementor-3524 :is(.elementor-element-0e89be6, .elementor-element-3ccef28, .elementor-element-e3436b3) { flex-direction: column !important; align-items: flex-start !important; gap: 4px !important; }
   .elementor-3524 :is(.elementor-element-0e89be6, .elementor-element-3ccef28, .elementor-element-e3436b3) > * { width: 100% !important; max-width: 100% !important; }
+  /* Retreats: Desert Way, foto sopra e testo sotto */
+  .elementor-2770 .elementor-element-0d0757c { width: 100% !important; --width: 100% !important; min-height: 0; aspect-ratio: 3 / 2; }
   /* Corporate: numeri al centro */
   #cbs-stats .cbs-stat { text-align: center; }
   /* Corporate FAQ: una colonna */
@@ -1788,6 +1789,8 @@ lazyloadBackgroundObserver.unobserve(entry.target)}})},{rootMargin:'200px 0px 20
       var scrolled = wrap._stick - r.top;
       var p = Math.max(0, Math.min(1, scrolled / wrap._len));
       var i = r.top > wrap._stick + window.innerHeight * 0.25 ? 0 : Math.min(n - 1, Math.floor(p * n));
+      // se il browser non tiene ferma la sezione, quando sta uscendo dallo schermo si accendono tutti gli step
+      if (sec.getBoundingClientRect().bottom < window.innerHeight * 0.75) i = n - 1;
       set(i, p);
       sec.classList.toggle('tbw-pin-live', scrolled > 0 && p < 1);
       if (mode === 'hover' && (p >= 1 || r.bottom < 0)) steps[n - 1].dispatchEvent(new Event('mouseleave'));
