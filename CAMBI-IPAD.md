@@ -33,7 +33,7 @@ Sezioni a step (1, 2, 3): lo scroll si deve fermare sulla sezione, ogni scroll p
 
 ## Offerings
 - [ ] Telefono: le 4 tab (Calm my system, Fix how I breathe, ...) aprono la descrizione sotto tutte le tab e non si vede. Su telefono: tab chiuse di base (o solo la prima aperta), la descrizione si apre subito sotto la tab cliccata. iPad va bene così
-- [ ] Manca il link "Book this session": DA DECIDERE con Fabio il flusso (modulo, Calendly, altro)
+- [ ] Manca il link "Book this session": deciso, apre un modulo di richiesta (nome, email, messaggio). Il collegamento dell'invio resta da fare come gli altri moduli
 - [ ] Sezione dei 3 step: blocco dello scroll
 - [ ] "Hey I'm Fabio": foto più grande, testo meno incolonnato
 - [ ] "What clients say": l'immagine si ripete 2 volte su iPad
@@ -57,6 +57,5 @@ Sezioni a step (1, 2, 3): lo scroll si deve fermare sulla sezione, ogni scroll p
 - [ ] Locandina da Ritiri Itineranti (se non c'è, Fabio la manda)
 
 ## Da decidere / in attesa
-- Flusso "Book this session"
 - Locandina Desert Way
 - Il messaggio di Fabio si è interrotto ("Ok, poi"): altri punti in arrivo
