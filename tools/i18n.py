@@ -97,7 +97,7 @@ def units(body):
 def js_strings(soup):
     found = []
     for s in soup.find_all('script'):
-        if s.get('src') or (s.get('type') and s['type'] != 'text/javascript'):
+        if s.get('src') or (s.get('type') and s['type'] != 'text/javascript') or s.get('id') == 'tbw-ux':
             continue
         js = s.string or ''
         for m in re.finditer(r"'((?:[^'\\\n]|\\.)*)'|\"((?:[^\"\\\n]|\\.)*)\"", js):
@@ -135,7 +135,7 @@ def extract():
         if slug in NO_IT:
             continue
         soup = BeautifulSoup(open(os.path.join(ROOT, f), encoding='utf-8').read(), 'html.parser')
-        for old in soup.select('.tbw-lang'):
+        for old in soup.select('.tbw-lang, .tbw-lang-m'):
             old.decompose()
         for _, k in units(soup.body):
             keys.setdefault(k, []).append(slug)
@@ -184,7 +184,7 @@ MENU_JS = ("(function(){var b=document.querySelector('#ast-mobile-header .menu-t
 
 def add_common(soup, slug, lang):
     """pulsante EN/IT nei due menu, hreflang, menu mobile funzionante"""
-    for old in soup.select('.tbw-lang, link[hreflang], #tbw-lang-css, #tbw-menu-js'):
+    for old in soup.select('.tbw-lang, .tbw-lang-m, link[hreflang], #tbw-lang-css, #tbw-menu-js'):
         old.decompose()
     path = '' if slug == 'home' else slug + '/'
     if lang == 'en':
@@ -200,6 +200,14 @@ def add_common(soup, slug, lang):
         a.string = label_off
         li.append(a)
         ul.append(li)
+    # telefono e tablet: pulsante lingua sempre visibile accanto al menu
+    tog = soup.select_one('#ast-mobile-header .menu-toggle')
+    if tog:
+        a = soup.new_tag('a', attrs={'class': 'tbw-lang-m', 'href': target, 'hreflang': 'it' if lang == 'en' else 'en',
+                                     'lang': 'it' if lang == 'en' else 'en',
+                                     'aria-label': 'Versione italiana' if lang == 'en' else 'English version'})
+        a.string = label_off
+        tog.insert_before(a)
     head = soup.head
     for hl, url in (('en', LIVE + path), ('it', LIVE + 'it/' + path), ('x-default', LIVE + path)):
         head.append(soup.new_tag('link', attrs={'rel': 'alternate', 'hreflang': hl, 'href': url}))
@@ -225,7 +233,7 @@ def build():
         open(src, 'w', encoding='utf-8').write(str(soup))
         # pagina italiana
         soup = BeautifulSoup(raw, 'html.parser')
-        for old in soup.select('.tbw-lang'):
+        for old in soup.select('.tbw-lang, .tbw-lang-m'):
             old.decompose()
         for node, k in units(soup.body):
             v = it.get(k)

@@ -160,7 +160,7 @@
 "retreats-events",
 "terms-conditions"
 ],
-"<a>Insights</a>": [
+"<a>Blog</a>": [
 "about-me",
 "behind-the-guilt-of-slowing-down",
 "box-breathing",
@@ -268,7 +268,7 @@
 "→ When you finally stop, something inside won’t let you rest and you feel guilty.": [
 "home"
 ],
-"Take the <span>Nervous System Assessment</span><br> and see exactly where you are": [
+"Take the <span>Nervous System Assessment</span><br><span>and see exactly where you are</span>": [
 "home"
 ],
 "Start with the free assessment. It takes a few minutes<br>and gives you a first picture of how you respond to stress<br>and what your body might need right now.": [
@@ -1274,12 +1274,6 @@
 "privacy-policy",
 "registration-form-bw-ceremony",
 "terms-conditions"
-],
-"js:IntersectionObserver": [
-"breathwork-lisbon",
-"corporate-breathwork",
-"home",
-"retreats-events"
 ],
 "js:DOMContentLoaded": [
 "about-me",
@@ -2414,6 +2408,48 @@
 "Begin where you are": [
 "breathwork-lisbon"
 ],
+"Tell me a bit about you": [
+"breathwork-lisbon"
+],
+"Send your request and I'll get back to you within 48 hours to find a time that works.": [
+"breathwork-lisbon"
+],
+"Session": [
+"breathwork-lisbon"
+],
+"Your name": [
+"breathwork-lisbon",
+"retreats-events"
+],
+"Lisbon or online?": [
+"breathwork-lisbon"
+],
+"Lisbon": [
+"breathwork-lisbon"
+],
+"Online": [
+"breathwork-lisbon"
+],
+"Not sure yet": [
+"breathwork-lisbon",
+"corporate-breathwork",
+"retreats-events"
+],
+"Anything you'd like me to know": [
+"breathwork-lisbon"
+],
+"Send request": [
+"breathwork-lisbon"
+],
+"Your details are only used to reply to your request. <a>Privacy Policy</a>": [
+"breathwork-lisbon"
+],
+"Thank you, your request has been sent. I'll get back to you soon.": [
+"breathwork-lisbon"
+],
+"Something went wrong. Please write to hello@thebreathworkway.com": [
+"breathwork-lisbon"
+],
 "Breathe with me. Click to minimise or open.": [
 "breathwork-lisbon"
 ],
@@ -2428,6 +2464,11 @@
 ],
 "guided breathwork and nervous system regulation online practices": [
 "breathwork-lisbon"
+],
+"Close": [
+"breathwork-lisbon",
+"corporate-breathwork",
+"retreats-events"
 ],
 "Breathwork for high performers Lisbon | TheBreathworkWay": [
 "breathwork-lisbon"
@@ -2471,6 +2512,11 @@
 "js:--glow": [
 "breathwork-lisbon",
 "framework"
+],
+"js:IntersectionObserver": [
+"breathwork-lisbon",
+"corporate-breathwork",
+"retreats-events"
 ],
 "<i>Breathwork vs Meditation:</i> What Works <br> Better for Busy Executives": [
 "breathwork-vs-meditation-for-executives"
@@ -3705,10 +3751,6 @@
 "Corporate Retreat": [
 "corporate-breathwork"
 ],
-"Not sure yet": [
-"corporate-breathwork",
-"retreats-events"
-],
 "Budget *": [
 "corporate-breathwork"
 ],
@@ -3741,10 +3783,6 @@
 ],
 "We've received your request and will reach out within 48 hours with a tailored proposal for your team.": [
 "corporate-breathwork"
-],
-"Close": [
-"corporate-breathwork",
-"retreats-events"
 ],
 "Partners": [
 "corporate-breathwork"
@@ -3805,12 +3843,6 @@
 "corporate-breathwork"
 ],
 "js:b[data-n]": [
-"corporate-breathwork"
-],
-"js:(max-width:900px)": [
-"corporate-breathwork"
-],
-"js:--lh": [
 "corporate-breathwork"
 ],
 "js:Escape": [
@@ -4080,7 +4112,7 @@
 "js:px)": [
 "framework"
 ],
-"Insights": [
+"Blog": [
 "insights"
 ],
 "Nervous system science, breathwork research and leadership performance.": [
@@ -5703,7 +5735,7 @@
 "The Desert Way": [
 "retreats-events"
 ],
-"Moroccan desert · with Inner Travels": [
+"Moroccan desert · with Ritiri Itineranti": [
 "retreats-events"
 ],
 "Back soon<small>Sunrise</small>": [
@@ -5715,7 +5747,7 @@
 "Costa da Caparica": [
 "retreats-events"
 ],
-"FEATURED RETREAT - INNER TRAVELS": [
+"FEATURED RETREAT - RITIRI ITINERANTI": [
 "retreats-events"
 ],
 "April 21-27": [
@@ -5733,6 +5765,9 @@
 "Through silence, desert walks and practices that engage body, mind, and soul, clarity gradually emerges, making space for what truly needs to be heard. <b>You return with a wider, more authentic, and aligned perception of life</b>, carrying presence and awareness into everyday moments.": [
 "retreats-events"
 ],
+"<a>Explore more<span> →</span></a>": [
+"retreats-events"
+],
 "Your own private retreat": [
 "retreats-events"
 ],
@@ -5746,9 +5781,6 @@
 "retreats-events"
 ],
 "Sometimes the best way to reconnect a team, a group of friends or your family is to step away together for a few days. I design every private retreat from scratch, around the people who are coming and what you want this time together to give them. Tell me a bit about your group and your ideas, and I'll get back to you with a first proposal.": [
-"retreats-events"
-],
-"Your name": [
 "retreats-events"
 ],
 "Who is the retreat for?": [
@@ -5850,7 +5882,7 @@
 "Upcoming retreats and events": [
 "retreats-events"
 ],
-"Desert Way retreat in Morocco with Inner Travels: group walking in the Sahara dunes": [
+"Desert Way retreat in Morocco with Ritiri Itineranti: group walking in the Sahara dunes": [
 "retreats-events"
 ],
 "Country code": [

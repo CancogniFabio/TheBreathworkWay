@@ -34,7 +34,7 @@ HEADINGS = [
     ('corporate-breathwork', 'questions', 'h1', 'h2'),
     # due H1 nella stessa pagina
     ('breathwork-lisbon', 'The Breathwork Way Offerings', 'h1', 'h2'),
-    ('retreats-events', 'FEATURED RETREAT - INNER TRAVELS', 'h1', 'h2'),
+    ('retreats-events', 'FEATURED RETREAT - RITIRI ITINERANTI', 'h1', 'h2'),
     # titoli degli articoli in Insights: erano H6 (salto di livelli)
     ('insights', 'The Guilt of Slowing Down', 'h6', 'h2'),
     ('insights', 'Breathwork for Stress and Anxiety', 'h6', 'h2'),
@@ -68,7 +68,7 @@ def fix_head(slug, t):
         pre = re.sub(r'<meta\b[^>]*(name="description"|property="og:[^"]*"|name="twitter:[^"]*")[^>]*>', '', head[:ti])
         head = pre + head[ti:]
     # canonical
-    head = re.sub(r'<link rel="canonical"[^>]*>', '', head)
+    head = re.sub(r'<link\b[^>]*rel="canonical"[^>]*>', '', head)
     url = LIVE if slug == 'home' else LIVE + slug + '/'
     head = head.replace('</title>', '</title><link rel="canonical" href="%s">' % url, 1)
     if slug in META:
@@ -203,9 +203,20 @@ def fix_css(slug, t):
     t = re.sub(r'<style id="tbw-seo-css">.*?</style>', '', t, flags=re.S)
     t = re.sub(r'<style id="tbw-quality">.*?</style>', '', t, flags=re.S)
     q = open(os.path.join(ROOT, 'tools', 'quality.css'), encoding='utf-8').read()
+    # impaginazione su iPad e telefono (richieste di Fabio, nov 2026)
+    r = os.path.join(ROOT, 'tools', 'responsive.css')
+    if os.path.exists(r):
+        q += '\n' + open(r, encoding='utf-8').read()
     t = t.replace('</head>', '<style id="tbw-quality">%s</style></head>' % q, 1)
     f = os.path.join(ROOT, 'tools', 'seo-css.json')
     css = json.load(open(f)).get(slug, '') if os.path.exists(f) else ''
+    # comportamenti (scroll a step, tab, lingua): tools/ux.js in fondo alla pagina
+    t = re.sub(r'<script id="tbw-ux">.*?</script>', '', t, flags=re.S)
+    u = os.path.join(ROOT, 'tools', 'ux.js')
+    if os.path.exists(u):
+        js = open(u, encoding='utf-8').read().replace('</', '<\\/')
+        i = t.rfind('</body>')
+        t = t[:i] + '<script id="tbw-ux">%s</script>' % js + t[i:]
     if css:
         t = t.replace('</head>', '<style id="tbw-seo-css">%s</style></head>' % css, 1)
     return t

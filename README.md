@@ -24,6 +24,8 @@ Vedi GO-LIVE.md (cosa è pronto e cosa resta). `python3 tools/golive.py` crea di
 Pagine rinominate nella copia: /privacy-policy/ (era /cookie-policy-copy/), /cookies-policy/ (era /contact-copy/), /terms-conditions/ (era /terms-conditions-2/), /behind-the-guilt-of-slowing-down/ (era guild). finalize.py le gestisce da sé.
 
 ## Qualità e coerenza (dopo la copia)
+Per rigenerare tutto dopo una modifica: `./tools/rebuild.sh` (seo, footer, fixes, 404, layout, italiano).
+Impaginazione iPad/telefono in tools/responsive.css, comportamenti in tools/ux.js, ritocchi HTML in tools/layout.py. Elenco richieste: CAMBI-IPAD.md.
 Pipeline di finalize.py: seo.py (titoli, H1, font, CSS di qualità) -> footer.py (footer unico della Home) -> fixes.py (correzioni testi inglesi, tools/fixes/text-en.json) -> i18n.py (pagine /it/).
 Ritocchi di stile in tools/quality.css (header e menu mobile, margini su tablet e telefono, Contatti, newsletter).
 
@@ -32,6 +34,7 @@ Pagine italiane in /it/ generate da tools/i18n.py (traduzioni in tools/i18n/it.j
 
 ## Da ricordare
 - Moduli (newsletter, contatti, prenotazioni) da collegare
+- Offerings: "Book this session" apre un modulo di richiesta che invia a Formspree (xkjgawre, lo stesso delle richieste ritiri)
 - Framework: modulo newsletter (MailerLite) da collegare
 - Offerings: modulo newsletter (MailerLite) da collegare
 - Corporate Breathwork: modulo richieste aziende (invia a Formspree come il live) da collegare

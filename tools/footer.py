@@ -70,6 +70,16 @@ def main():
     rules = css_rules(home_css)
     block_html = ''.join(str(x) for x in hb)
     btok = tokens(hb)
+    # classi che compaiono anche fuori dal footer (es. .e-con, .elementor-element) non bastano a scegliere una regola:
+    # altrimenti entrano anche le regole della Home per gli elementi con lo stesso id (es. lo sfondo dell'hero)
+    rest = set()
+    for el in home.body.find_all(True):
+        if not any(el is x or x in el.parents for x in hb):
+            if el.get('id'):
+                rest.add('#' + el['id'])
+            for c in el.get('class') or []:
+                rest.add('.' + c)
+    unique = btok - rest
     done = []
     for d in sorted(os.listdir(ROOT)):
         f = os.path.join(ROOT, d, 'index.html')
@@ -102,7 +112,9 @@ def main():
         css = []
         for media, sel, rule in rules:
             toks = set(re.findall(r'[.#][A-Za-z0-9_-]+', sel))
-            if toks & need and not (toks & {'.elementor-kit-47'}):
+            ids = {x for x in toks if x.startswith('.elementor-element-')}
+            ok = (ids <= need) if ids else bool(toks & unique)
+            if ok and toks & need and not (toks & {'.elementor-kit-47'}):
                 css.append('%s{%s}' % (media, rule) if media else rule)
         # le regole della Home sono legate al suo contenitore (.elementor-<id>): uso quello di questa pagina
         hid = home.find(attrs={'data-elementor-type': 'wp-page'})['data-elementor-id']
